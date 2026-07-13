@@ -6,6 +6,7 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import appCss from "~/styles/app.css?url";
+import { ToastProvider } from "~/components/toast";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -29,13 +30,29 @@ export const Route = createRootRoute({
     </div>
   ),
   component: RootComponent,
+  errorComponent: ({ error }: { error: Error }) => (
+    <div className="flex min-h-dvh flex-col items-center justify-center gap-4 p-8">
+      <h1 className="text-4xl font-bold">Something went wrong</h1>
+      <p className="max-w-md text-center text-gray-600 dark:text-gray-400">
+        An unexpected error occurred. Please try refreshing the page.
+      </p>
+      {process.env.NODE_ENV !== "production" && (
+        <pre className="max-w-xl overflow-auto rounded-lg bg-red-50 p-4 text-xs text-red-800 dark:bg-red-950 dark:text-red-200">
+          {error instanceof Error ? error.message : String(error)}
+        </pre>
+      )}
+      <a href="/" className="text-indigo-600 hover:underline">Go home</a>
+    </div>
+  ),
 });
 
 function RootComponent() {
   return (
-    <RootDocument>
-      <Outlet />
-    </RootDocument>
+    <ToastProvider>
+      <RootDocument>
+        <Outlet />
+      </RootDocument>
+    </ToastProvider>
   );
 }
 

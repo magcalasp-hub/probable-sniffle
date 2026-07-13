@@ -171,6 +171,19 @@ export const listIntegrations = createServerFn({ method: "GET" }).handler(
   },
 );
 
+/** Check if the database is connected */
+export const checkDbStatus = createServerFn({ method: "GET" }).handler(
+  async (): Promise<boolean> => {
+    try {
+      const db = (await import("~/db")).sql();
+      await db`SELECT 1`;
+      return true;
+    } catch {
+      return false;
+    }
+  },
+);
+
 /** Delete an integration */
 export const deleteIntegration = createServerFn({ method: "POST" }).handler(
   async (payload: { id: string }): Promise<ApiResult<null>> => {

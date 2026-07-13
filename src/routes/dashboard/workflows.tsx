@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { DashboardLayout } from "~/components/dashboard-layout";
+import DashboardLayout from "~/components/dashboard-layout";
 import { useState, useEffect } from "react";
 import {
   listWorkflows,
