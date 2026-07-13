@@ -36,6 +36,11 @@ export const PLANS: Plan[] = [
     features: ["Up to 5 active integrations", "10 automated workflows", "Basic support"],
   },
   {
+    id: "nonprofit", name: "Non-Profit", price: 14,
+    description: "For verified 501(c)(3) organizations.",
+    features: ["Up to 10 active integrations", "100 automated workflows", "Requires 501(c)(3) verification"],
+  },
+  {
     id: "pro", name: "Pro", price: 79,
     description: "For growing businesses.",
     features: ["Unlimited integrations", "100 automated workflows", "Priority support", "Custom webhooks"],

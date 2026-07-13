@@ -122,6 +122,17 @@ function SignupPage() {
           <p className="text-xs text-gray-500 dark:text-gray-500">
             By signing up, you agree to our Terms of Service and Privacy Policy.
           </p>
+
+          {/* Non-profit pricing note */}
+          <div className="mt-6 rounded-lg border border-green-200 bg-green-50 p-3 dark:border-green-800 dark:bg-green-950">
+            <p className="text-xs text-green-800 dark:text-green-200">
+              <strong>🏛 Non-profit?</strong> We offer a <strong>$14/mo</strong> plan for
+              verified 501(c)(3) organizations.{" "}
+              <a href="/pricing" className="font-medium text-green-700 underline hover:text-green-600 dark:text-green-300 dark:hover:text-green-200">
+                Learn more →
+              </a>
+            </p>
+          </div>
         </form>
       </div>
     </div>

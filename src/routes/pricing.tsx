@@ -6,6 +6,24 @@ export const Route = createFileRoute("/pricing")({
 
 const plans = [
   {
+    name: "Non-Profit",
+    price: "$14",
+    period: "/month",
+    desc: "Discounted plan for verified 501(c)(3) organizations.",
+    features: [
+      "Up to 10 active integrations",
+      "100 workflow runs per day",
+      "Full workflow builder",
+      "Email notifications",
+      "30-day run history",
+      "Community support",
+      "Requires 501(c)(3) verification",
+    ],
+    cta: "Get non-profit pricing",
+    highlighted: false,
+    stripeLink: "https://buy.stripe.com/28EdR94kc8NE4QjaZmcMM02",
+  },
+  {
     name: "Starter",
     price: "$29",
     period: "/month",
@@ -74,7 +92,7 @@ function PricingPage() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-3">
+        <div className="mt-16 grid gap-8 lg:grid-cols-4">
           {plans.map((plan) => (
             <div
               key={plan.name}
@@ -84,7 +102,14 @@ function PricingPage() {
                   : "border-gray-200 dark:border-gray-800"
               }`}
             >
-              <h2 className="text-lg font-semibold">{plan.name}</h2>
+              {plan.name === "Non-Profit" && (
+                <span className="inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 dark:bg-green-900 dark:text-green-300">
+                  501(c)(3) discount
+                </span>
+              )}
+              <h2 className={`text-lg font-semibold ${plan.name === "Non-Profit" ? "mt-2" : ""}`}>
+                {plan.name}
+              </h2>
               <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
                 {plan.desc}
               </p>
@@ -116,16 +141,31 @@ function PricingPage() {
                   </li>
                 ))}
               </ul>
-              <a
-                href={plan.name === "Enterprise" ? "/contact" : "/signup"}
-                className={`mt-8 block rounded-lg px-6 py-3 text-center text-sm font-semibold ${
-                  plan.highlighted
-                    ? "bg-indigo-600 text-white hover:bg-indigo-500"
-                    : "border border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800"
-                }`}
-              >
-                {plan.cta}
-              </a>
+              {plan.stripeLink ? (
+                <a
+                  href={plan.stripeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-8 block rounded-lg px-6 py-3 text-center text-sm font-semibold ${
+                    plan.highlighted
+                      ? "bg-indigo-600 text-white hover:bg-indigo-500"
+                      : "border border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800"
+                  }`}
+                >
+                  {plan.cta}
+                </a>
+              ) : (
+                <a
+                  href={plan.name === "Enterprise" ? "/contact" : "/signup"}
+                  className={`mt-8 block rounded-lg px-6 py-3 text-center text-sm font-semibold ${
+                    plan.highlighted
+                      ? "bg-indigo-600 text-white hover:bg-indigo-500"
+                      : "border border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800"
+                  }`}
+                >
+                  {plan.cta}
+                </a>
+              )}
             </div>
           ))}
         </div>
