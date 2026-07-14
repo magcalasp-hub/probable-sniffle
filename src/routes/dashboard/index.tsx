@@ -39,7 +39,7 @@ function DashboardOverview() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-xl font-bold text-indigo-900 dark:text-indigo-100">Welcome to Nexus! 🚀</h2>
+                  <h2 className="text-xl font-bold text-indigo-900 dark:text-indigo-100">Welcome to LoomLoop! 🚀</h2>
                   <p className="mt-1 text-sm text-indigo-700 dark:text-indigo-300">Get started with a 3-step guided setup. Connect your first integration, create a workflow, and start automating in minutes.</p>
                 </div>
                 <a href="/dashboard/onboarding" className="flex shrink-0 items-center gap-1.5 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">
@@ -69,7 +69,7 @@ function DashboardOverview() {
 
         <div className="mb-8">
           <h1 className="text-2xl font-bold">Dashboard</h1>
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Overview of your Nexus automations.</p>
+          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Overview of your LoomLoop automations.</p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

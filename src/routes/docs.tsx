@@ -8,9 +8,9 @@ const guides = [
   {
     title: "Getting Started",
     items: [
-      { name: "What is Nexus?", desc: "Nexus connects your business tools and automates routine workflows — order processing, customer follow-ups, invoice reconciliation, appointment reminders. Set it up once, it runs on autopilot." },
+      { name: "What is LoomLoop?", desc: "LoomLoop connects your business tools and automates routine workflows — order processing, customer follow-ups, invoice reconciliation, appointment reminders. Set it up once, it runs on autopilot." },
       { name: "Quickstart guide", desc: "Connect your first integration, create a workflow, and run it — in under 5 minutes." },
-      { name: "Understanding integrations", desc: "Integrations are connections to your external services (Stripe, Gmail, Slack, etc.). Each integration gives Nexus access to read and perform actions on your behalf." },
+      { name: "Understanding integrations", desc: "Integrations are connections to your external services (Stripe, Gmail, Slack, etc.). Each integration gives LoomLoop access to read and perform actions on your behalf." },
       { name: "Understanding workflows", desc: "Workflows are sequences of automated actions triggered by a schedule, webhook, or manual run. Each step can pass data to the next step using template variables." },
     ],
   },
@@ -54,14 +54,14 @@ function DocsPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Documentation</h1>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Everything you need to get the most out of Nexus.</p>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Everything you need to get the most out of LoomLoop.</p>
         </div>
 
         <a href="#quickstart" className="mx-auto mt-8 flex max-w-2xl items-center justify-center gap-2 rounded-xl border-2 border-dashed border-indigo-300 p-4 text-indigo-700 transition-colors hover:border-indigo-400 hover:bg-indigo-50 dark:border-indigo-700 dark:text-indigo-300 dark:hover:border-indigo-500 dark:hover:bg-indigo-950">
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
-          <span className="font-semibold">New to Nexus? Start with the Quickstart Guide →</span>
+          <span className="font-semibold">New to LoomLoop? Start with the Quickstart Guide →</span>
         </a>
 
         <div className="mt-16 grid gap-12 md:grid-cols-2">

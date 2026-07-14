@@ -119,7 +119,7 @@ function FeaturesPage() {
             href="/signup"
             className="rounded-lg bg-indigo-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-indigo-500"
           >
-            Start building with Nexus
+            Start building with LoomLoop
           </a>
         </div>
       </div>

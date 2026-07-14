@@ -89,7 +89,7 @@ function IntegrationsPage() {
         <div className="mb-8">
           <h1 className="text-2xl font-bold">Integrations</h1>
           <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            Connect your tools to Nexus. One click to enable.
+            Connect your tools to LoomLoop. One click to enable.
           </p>
         </div>
 

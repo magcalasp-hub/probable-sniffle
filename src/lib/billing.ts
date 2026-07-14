@@ -1,5 +1,5 @@
 /**
- * Billing / Subscription module for Nexus.
+ * Billing / Subscription module for LoomLoop.
  * Integrates with Stripe to manage subscription tiers.
  * Gracefully handles missing STRIPE_SECRET_KEY.
  */

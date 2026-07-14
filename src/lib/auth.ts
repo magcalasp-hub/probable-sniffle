@@ -1,5 +1,5 @@
 /**
- * Auth utilities for Nexus.
+ * Auth utilities for LoomLoop.
  * Uses Bun.password for hashing and HTTP-only cookies for sessions.
  */
 import { sql } from "~/db";

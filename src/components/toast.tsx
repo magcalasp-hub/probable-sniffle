@@ -1,5 +1,5 @@
 /**
- * Toast notification system for Nexus.
+ * Toast notification system for LoomLoop.
  * Provides a simple toast container and context for showing notifications.
  */
 import { createContext, useContext, useState, useCallback, type ReactNode } from "react";

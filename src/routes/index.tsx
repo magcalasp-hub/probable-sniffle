@@ -17,7 +17,7 @@ function Home() {
               Connect your tools. <span className="text-indigo-600">Automate everything.</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-              Nexus connects your CRM, email, payments, bookings, and more — then automates your routine workflows.
+              LoomLoop connects your CRM, email, payments, bookings, and more — then automates your routine workflows.
             </p>
             <div className="mt-10 flex items-center justify-center gap-4">
               <a href="/signup" className="rounded-lg bg-indigo-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-indigo-500">Start free trial</a>

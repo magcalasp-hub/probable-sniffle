@@ -94,7 +94,7 @@ function OnboardingPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <h1 className="mt-6 text-3xl font-bold">Welcome to Nexus!</h1>
+            <h1 className="mt-6 text-3xl font-bold">Welcome to LoomLoop!</h1>
             <p className="mt-3 text-lg text-gray-600 dark:text-gray-400">Let&apos;s get you set up in 3 quick steps.</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {[{ n: "1", t: "Connect", d: "Link your first tool" }, { n: "2", t: "Create", d: "Build your first workflow" }, { n: "3", t: "Run", d: "Your automation runs on autopilot" }].map((item) => (
@@ -155,7 +155,7 @@ function OnboardingPage() {
               </svg>
             </div>
             <h1 className="mt-6 text-3xl font-bold">You&apos;re all set!</h1>
-            <p className="mt-3 text-lg text-gray-600 dark:text-gray-400">Your Nexus account is ready to go.</p>
+            <p className="mt-3 text-lg text-gray-600 dark:text-gray-400">Your LoomLoop account is ready to go.</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <a href="/dashboard/integrations" className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-indigo-300 dark:border-gray-800 dark:hover:border-indigo-700">
                 <h3 className="font-semibold">More integrations</h3><p className="mt-1 text-xs text-gray-500">Connect additional tools</p>
