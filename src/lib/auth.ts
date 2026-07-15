@@ -1,5 +1,5 @@
 /**
- * Auth utilities for LoomLoop.
+ * Auth utilities for LoomLink.
  * Uses Bun.password for hashing and HTTP-only cookies for sessions.
  */
 import { sql } from "~/db";

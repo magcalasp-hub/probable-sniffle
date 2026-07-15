@@ -92,7 +92,7 @@ function DocsPage() {
             Documentation
           </h1>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            Everything you need to get the most out of LoomLoop.
+            Everything you need to get the most out of LoomLink.
           </p>
         </div>
 

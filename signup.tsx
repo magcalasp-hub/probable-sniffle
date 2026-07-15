@@ -41,7 +41,7 @@ function SignupPage() {
     <div className="flex min-h-[calc(100dvh-4rem)] items-center justify-center px-4 py-12">
       <div className="w-full max-w-sm">
         <h1 className="text-2xl font-bold text-center">
-          Create your LoomLoop account
+          Create your LoomLink account
         </h1>
         <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
           Already have an account?{" "}

@@ -39,7 +39,7 @@ function LoginPage() {
   return (
     <div className="flex min-h-[calc(100dvh-4rem)] items-center justify-center px-4 py-12">
       <div className="w-full max-w-sm">
-        <h1 className="text-2xl font-bold text-center">Log in to LoomLoop</h1>
+        <h1 className="text-2xl font-bold text-center">Log in to LoomLink</h1>
         <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
           Don&apos;t have an account?{" "}
           <a href="/signup" className="text-indigo-600 hover:underline">

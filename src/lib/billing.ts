@@ -1,5 +1,5 @@
 /**
- * Billing / Subscription module for LoomLoop.
+ * Billing / Subscription module for LoomLink.
  * Integrates with Stripe to manage subscription tiers.
  * Gracefully handles missing STRIPE_SECRET_KEY.
  */

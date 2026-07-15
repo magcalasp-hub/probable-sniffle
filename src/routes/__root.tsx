@@ -13,7 +13,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "LoomLoop — Integration Platform" },
+      { title: "LoomLink — Integration Platform" },
       {
         name: "description",
         content:
@@ -78,7 +78,7 @@ function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-950/80">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-8">
-          <a href="/" className="text-xl font-bold tracking-tight text-indigo-600">LoomLoop</a>
+          <a href="/" className="text-xl font-bold tracking-tight text-indigo-600">LoomLink</a>
           <div className="hidden items-center gap-6 md:flex">
             <a href="/features" className="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Features</a>
             <a href="/pricing" className="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Pricing</a>
@@ -134,7 +134,7 @@ function SiteFooter() {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-200 pt-8 dark:border-gray-800">
-          <p className="text-sm text-gray-400 dark:text-gray-600">&copy; {year} LoomLoop. All rights reserved.</p>
+          <p className="text-sm text-gray-400 dark:text-gray-600">&copy; {year} LoomLink. All rights reserved.</p>
         </div>
       </div>
     </footer>
