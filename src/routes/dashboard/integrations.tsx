@@ -165,7 +165,7 @@ function IntegrationsPage() {
                       <button
                         onClick={() => handleConnect(connector)}
                         disabled={connecting === connector.id}
-                        className="mt-4 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500 disabled:opacity-50"
+                        className="mt-4 rounded-lg bg-rose-gold-600 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-gold-500 disabled:opacity-50"
                       >
                         {connecting === connector.id ? "Connecting..." : "Connect"}
                       </button>
@@ -217,7 +217,7 @@ function IntegrationsPage() {
                   <button
                     type="submit"
                     disabled={!!connecting}
-                    className="flex-1 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500 disabled:opacity-50"
+                    className="flex-1 rounded-lg bg-rose-gold-600 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-gold-500 disabled:opacity-50"
                   >
                     {connecting ? "Connecting..." : "Connect"}
                   </button>

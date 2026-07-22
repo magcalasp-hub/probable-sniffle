@@ -79,18 +79,18 @@ function OnboardingPage() {
         <div className="mb-8 flex items-center justify-center gap-2">
           {(["welcome", "connect", "workflow", "done"] as const).map((s, i) => (
             <div key={s} className="flex items-center gap-2">
-              <div className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold ${step === s ? "bg-indigo-600 text-white" : ["connect", "workflow", "done"].indexOf(s) <= ["connect", "workflow", "done"].indexOf(step) ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-200" : "bg-gray-100 text-gray-400 dark:bg-gray-800"}`}>
+              <div className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold ${step === s ? "bg-rose-gold-600 text-white" : ["connect", "workflow", "done"].indexOf(s) <= ["connect", "workflow", "done"].indexOf(step) ? "bg-blush-100 text-rose-gold-700 dark:bg-rose-gold-900 dark:text-blush-200" : "bg-gray-100 text-gray-400 dark:bg-gray-800"}`}>
                 {["connect", "workflow", "done"].indexOf(s) <= ["connect", "workflow", "done"].indexOf(step) && step !== s ? "✓" : i + 1}
               </div>
-              {i < 3 && <div className={`h-0.5 w-8 ${["connect", "workflow", "done"].indexOf(s) < ["connect", "workflow", "done"].indexOf(step) ? "bg-indigo-500" : "bg-gray-200 dark:bg-gray-700"}`} />}
+              {i < 3 && <div className={`h-0.5 w-8 ${["connect", "workflow", "done"].indexOf(s) < ["connect", "workflow", "done"].indexOf(step) ? "bg-rose-gold-500" : "bg-gray-200 dark:bg-gray-700"}`} />}
             </div>
           ))}
         </div>
 
         {step === "welcome" && (
           <div className="text-center">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-100 dark:bg-indigo-900">
-              <svg className="h-8 w-8 text-indigo-600 dark:text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-blush-100 dark:bg-rose-gold-900">
+              <svg className="h-8 w-8 text-rose-gold-600 dark:text-rose-gold-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
@@ -99,13 +99,13 @@ function OnboardingPage() {
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {[{ n: "1", t: "Connect", d: "Link your first tool" }, { n: "2", t: "Create", d: "Build your first workflow" }, { n: "3", t: "Run", d: "Your automation runs on autopilot" }].map((item) => (
                 <div key={item.n} className="rounded-xl border border-gray-200 p-4 text-left dark:border-gray-800">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-700 dark:bg-indigo-900 dark:text-indigo-200">{item.n}</span>
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blush-100 text-xs font-bold text-rose-gold-700 dark:bg-rose-gold-900 dark:text-blush-200">{item.n}</span>
                   <h3 className="mt-3 font-semibold">{item.t}</h3>
                   <p className="mt-1 text-xs text-gray-500">{item.d}</p>
                 </div>
               ))}
             </div>
-            <button onClick={() => setStep("connect")} className="mt-8 rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">Get started →</button>
+            <button onClick={() => setStep("connect")} className="mt-8 rounded-lg bg-rose-gold-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-rose-gold-500">Get started →</button>
           </div>
         )}
 
@@ -115,7 +115,7 @@ function OnboardingPage() {
             <p className="mt-2 text-gray-600 dark:text-gray-400">Pick a service to connect.</p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {connectors.slice(0, 4).map((connector) => (
-                <button key={connector.id} onClick={() => handleConnectIntegration(connector.id)} className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-indigo-300 hover:bg-indigo-50 dark:border-gray-800 dark:hover:border-indigo-700 dark:hover:bg-indigo-950">
+                <button key={connector.id} onClick={() => handleConnectIntegration(connector.id)} className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-rose-gold-300 hover:bg-blush-50 dark:border-gray-800 dark:hover:border-rose-gold-700 dark:hover:bg-rose-gold-950">
                   <div className="flex items-center gap-3">
                     <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-lg dark:bg-gray-800">{connector.icon}</span>
                     <div><h3 className="font-semibold">{connector.name}</h3><p className="text-xs text-gray-500">{connector.authType === "api_key" ? "API Key" : "OAuth"}</p></div>
@@ -141,7 +141,7 @@ function OnboardingPage() {
               </ul>
             </div>
             <div className="mt-6 flex gap-3">
-              <button onClick={handleCreateWorkflow} className="rounded-lg bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">Create workflow →</button>
+              <button onClick={handleCreateWorkflow} className="rounded-lg bg-rose-gold-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-rose-gold-500">Create workflow →</button>
               <button onClick={handleSkipWorkflow} className="text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">Skip for now</button>
             </div>
           </div>
@@ -157,17 +157,17 @@ function OnboardingPage() {
             <h1 className="mt-6 text-3xl font-bold">You&apos;re all set!</h1>
             <p className="mt-3 text-lg text-gray-600 dark:text-gray-400">Your LoomLink account is ready to go.</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              <a href="/dashboard/integrations" className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-indigo-300 dark:border-gray-800 dark:hover:border-indigo-700">
+              <a href="/dashboard/integrations" className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-rose-gold-300 dark:border-gray-800 dark:hover:border-rose-gold-700">
                 <h3 className="font-semibold">More integrations</h3><p className="mt-1 text-xs text-gray-500">Connect additional tools</p>
               </a>
-              <a href="/dashboard/workflows/new" className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-indigo-300 dark:border-gray-800 dark:hover:border-indigo-700">
+              <a href="/dashboard/workflows/new" className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-rose-gold-300 dark:border-gray-800 dark:hover:border-rose-gold-700">
                 <h3 className="font-semibold">Build workflows</h3><p className="mt-1 text-xs text-gray-500">Create multi-step automations</p>
               </a>
-              <a href="/docs" className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-indigo-300 dark:border-gray-800 dark:hover:border-indigo-700">
+              <a href="/docs" className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-rose-gold-300 dark:border-gray-800 dark:hover:border-rose-gold-700">
                 <h3 className="font-semibold">Read the docs</h3><p className="mt-1 text-xs text-gray-500">Learn about templates & cron</p>
               </a>
             </div>
-            <button onClick={handleFinish} className="mt-8 rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">Go to dashboard →</button>
+            <button onClick={handleFinish} className="mt-8 rounded-lg bg-rose-gold-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-rose-gold-500">Go to dashboard →</button>
           </div>
         )}
       </div>

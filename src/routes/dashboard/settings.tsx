@@ -93,7 +93,7 @@ function SettingsPage() {
               {plans.map((plan) => {
                 const isCurrent = plan.id === currentPlan?.id;
                 return (
-                  <div key={plan.id} className={`rounded-lg border p-4 ${isCurrent ? "border-indigo-500 bg-indigo-50 dark:border-indigo-600 dark:bg-indigo-950" : "border-gray-200 dark:border-gray-700"}`}>
+                  <div key={plan.id} className={`rounded-lg border p-4 ${isCurrent ? "border-rose-gold-500 bg-blush-50 dark:border-rose-gold-600 dark:bg-rose-gold-950" : "border-gray-200 dark:border-gray-700"}`}>
                     <h3 className="font-semibold">{plan.name}</h3>
                     <p className="mt-1 text-2xl font-bold">{plan.price > 0 ? `$${plan.price}` : "Custom"}<span className="text-sm font-normal text-gray-500">{plan.price > 0 ? "/mo" : ""}</span></p>
                     <ul className="mt-3 space-y-1 text-xs text-gray-600 dark:text-gray-400">
@@ -107,13 +107,13 @@ function SettingsPage() {
                       ))}
                     </ul>
                     {isCurrent ? (
-                      <span className="mt-3 inline-block rounded-md bg-indigo-100 px-3 py-1.5 text-xs font-medium text-indigo-700 dark:bg-indigo-800 dark:text-indigo-200">Current plan</span>
+                      <span className="mt-3 inline-block rounded-md bg-blush-100 px-3 py-1.5 text-xs font-medium text-rose-gold-700 dark:bg-rose-gold-800 dark:text-blush-200">Current plan</span>
                     ) : plan.price > 0 ? (
-                      <button onClick={() => handleUpgrade(plan.id)} disabled={checkoutLoading === plan.id} className="mt-3 inline-block w-full rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-indigo-500 disabled:opacity-50">
+                      <button onClick={() => handleUpgrade(plan.id)} disabled={checkoutLoading === plan.id} className="mt-3 inline-block w-full rounded-lg bg-rose-gold-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-rose-gold-500 disabled:opacity-50">
                         {checkoutLoading === plan.id ? "Loading…" : "Upgrade"}
                       </button>
                     ) : (
-                      <a href="/pricing" className="mt-3 inline-block w-full rounded-lg border border-indigo-600 px-3 py-1.5 text-center text-xs font-semibold text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-950">Contact us</a>
+                      <a href="/pricing" className="mt-3 inline-block w-full rounded-lg border border-rose-gold-600 px-3 py-1.5 text-center text-xs font-semibold text-rose-gold-600 hover:bg-blush-50 dark:hover:bg-rose-gold-950">Contact us</a>
                     )}
                   </div>
                 );
@@ -121,7 +121,7 @@ function SettingsPage() {
             </div>
 
             {billing?.stripeEnabled && (
-              <button onClick={handlePortal} className="mt-4 text-sm font-medium text-indigo-600 hover:underline dark:text-indigo-400">
+              <button onClick={handlePortal} className="mt-4 text-sm font-medium text-rose-gold-600 hover:underline dark:text-rose-gold-400">
                 Manage billing & subscription →
               </button>
             )}

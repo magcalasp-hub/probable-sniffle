@@ -42,7 +42,7 @@ function LoginPage() {
         <h1 className="text-2xl font-bold text-center">Log in to LoomLink</h1>
         <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
           Don&apos;t have an account?{" "}
-          <a href="/signup" className="text-indigo-600 hover:underline">
+          <a href="/signup" className="text-rose-gold-600 hover:underline">
             Sign up
           </a>
         </p>
@@ -67,7 +67,7 @@ function LoginPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
               placeholder="you@example.com"
             />
           </div>
@@ -85,7 +85,7 @@ function LoginPage() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
               placeholder="Your password"
             />
           </div>
@@ -93,7 +93,7 @@ function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 disabled:opacity-50"
+            className="w-full rounded-lg bg-rose-gold-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-rose-gold-500 disabled:opacity-50"
           >
             {loading ? "Logging in..." : "Log in"}
           </button>

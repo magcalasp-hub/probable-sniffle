@@ -39,7 +39,7 @@ export default function DashboardLayout({ children, currentPath }: Props) {
           {navItems.map((item) => {
             const isActive = currentPath === item.path;
             return (
-              <a key={item.path} href={item.href} className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${isActive ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-200" : "text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100"}`}>
+              <a key={item.path} href={item.href} className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${isActive ? "bg-blush-100 text-rose-gold-700 dark:bg-rose-gold-900 dark:text-blush-200" : "text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100"}`}>
                 <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                 </svg>
@@ -83,7 +83,7 @@ export default function DashboardLayout({ children, currentPath }: Props) {
           {navItems.map((item) => {
             const isActive = currentPath === item.path;
             return (
-              <a key={item.path} href={item.href} className={`flex shrink-0 items-center gap-1.5 border-b-2 px-4 py-3 text-xs font-medium ${isActive ? "border-indigo-600 text-indigo-600" : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"}`}>
+              <a key={item.path} href={item.href} className={`flex shrink-0 items-center gap-1.5 border-b-2 px-4 py-3 text-xs font-medium ${isActive ? "border-rose-gold-600 text-rose-gold-600" : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"}`}>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                 </svg>

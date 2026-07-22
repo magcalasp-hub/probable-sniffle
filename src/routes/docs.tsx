@@ -57,7 +57,7 @@ function DocsPage() {
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Everything you need to get the most out of LoomLink.</p>
         </div>
 
-        <a href="#quickstart" className="mx-auto mt-8 flex max-w-2xl items-center justify-center gap-2 rounded-xl border-2 border-dashed border-indigo-300 p-4 text-indigo-700 transition-colors hover:border-indigo-400 hover:bg-indigo-50 dark:border-indigo-700 dark:text-indigo-300 dark:hover:border-indigo-500 dark:hover:bg-indigo-950">
+        <a href="#quickstart" className="mx-auto mt-8 flex max-w-2xl items-center justify-center gap-2 rounded-xl border-2 border-dashed border-rose-gold-300 p-4 text-rose-gold-700 transition-colors hover:border-rose-gold-400 hover:bg-blush-50 dark:border-rose-gold-700 dark:text-rose-gold-300 dark:hover:border-rose-gold-500 dark:hover:bg-rose-gold-950">
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
@@ -67,7 +67,7 @@ function DocsPage() {
         <div className="mt-16 grid gap-12 md:grid-cols-2">
           {guides.map((section) => (
             <div key={section.title} className={section.title === "Integration Guides" ? "md:col-span-2" : ""}>
-              <h2 className="text-xl font-bold text-indigo-600">{section.title}</h2>
+              <h2 className="text-xl font-bold text-rose-gold-600">{section.title}</h2>
               <div className="mt-6 space-y-6">
                 {section.items.map((item) => (
                   <div key={item.name}>
@@ -77,7 +77,7 @@ function DocsPage() {
                       <ul className="mt-2 space-y-1 text-xs text-gray-500">
                         {item.details.map((d) => (
                           <li key={d} className="flex items-start gap-1.5">
-                            <svg className="mt-0.5 h-3 w-3 shrink-0 text-indigo-500" fill="currentColor" viewBox="0 0 20 20">
+                            <svg className="mt-0.5 h-3 w-3 shrink-0 text-rose-gold-500" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                             </svg>
                             {d}
@@ -97,21 +97,21 @@ function DocsPage() {
           <div className="mt-6 space-y-8">
             <div className="rounded-xl border border-gray-200 p-6 dark:border-gray-800">
               <div className="flex items-center gap-3">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 text-sm font-bold text-white">1</span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-gold-600 text-sm font-bold text-white">1</span>
                 <h3 className="text-lg font-semibold">Connect an integration</h3>
               </div>
               <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">Go to the Integrations page in your dashboard. Pick a service (Stripe, Gmail, Slack, etc.) and click Connect. For API-key-based services, paste your key. For OAuth services, you'll be redirected to authorize access.</p>
             </div>
             <div className="rounded-xl border border-gray-200 p-6 dark:border-gray-800">
               <div className="flex items-center gap-3">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 text-sm font-bold text-white">2</span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-gold-600 text-sm font-bold text-white">2</span>
                 <h3 className="text-lg font-semibold">Create a workflow</h3>
               </div>
               <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">Go to Workflows → New Workflow. Give it a name, choose a trigger (Manual, Schedule, or Webhook), then add action steps. Each step picks a connector and an operation. Save when you're done.</p>
             </div>
             <div className="rounded-xl border border-gray-200 p-6 dark:border-gray-800">
               <div className="flex items-center gap-3">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 text-sm font-bold text-white">3</span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-gold-600 text-sm font-bold text-white">3</span>
                 <h3 className="text-lg font-semibold">Run it</h3>
               </div>
               <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">From the Workflows list, click Run to test your workflow manually. Check the Activity log to see results. Once everything works, enable the workflow to run on its trigger schedule automatically.</p>
@@ -160,7 +160,7 @@ function DocsPage() {
         <div className="mt-16 rounded-xl border border-gray-200 bg-gray-50 p-8 text-center dark:border-gray-800 dark:bg-gray-900">
           <h2 className="text-xl font-bold">Need help?</h2>
           <p className="mt-2 text-gray-600 dark:text-gray-400">Can&apos;t find what you&apos;re looking for? Reach out to our support team.</p>
-          <a href="#" className="mt-4 inline-block text-sm font-medium text-indigo-600 hover:underline">Contact support →</a>
+          <a href="#" className="mt-4 inline-block text-sm font-medium text-rose-gold-600 hover:underline">Contact support →</a>
         </div>
       </div>
     </div>

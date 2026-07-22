@@ -117,7 +117,7 @@ function FeaturesPage() {
         <div className="mt-16 text-center">
           <a
             href="/signup"
-            className="rounded-lg bg-indigo-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-indigo-500"
+            className="rounded-lg bg-rose-gold-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-rose-gold-500"
           >
             Start building with LoomLink
           </a>

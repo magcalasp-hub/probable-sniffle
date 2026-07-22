@@ -45,7 +45,7 @@ function SignupPage() {
         </h1>
         <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
           Already have an account?{" "}
-          <a href="/login" className="text-indigo-600 hover:underline">
+          <a href="/login" className="text-rose-gold-600 hover:underline">
             Log in
           </a>
         </p>
@@ -69,7 +69,7 @@ function SignupPage() {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
               placeholder="Your name"
             />
           </div>
@@ -87,7 +87,7 @@ function SignupPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
               placeholder="you@example.com"
             />
           </div>
@@ -106,7 +106,7 @@ function SignupPage() {
               minLength={8}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
               placeholder="At least 8 characters"
             />
           </div>
@@ -114,7 +114,7 @@ function SignupPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 disabled:opacity-50"
+            className="w-full rounded-lg bg-rose-gold-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-rose-gold-500 disabled:opacity-50"
           >
             {loading ? "Creating account..." : "Create account"}
           </button>

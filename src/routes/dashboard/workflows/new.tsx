@@ -86,7 +86,7 @@ function NewWorkflowPage() {
             </p>
             <a
               href="/dashboard/workflows"
-              className="mt-4 inline-block rounded-lg bg-indigo-600 px-6 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
+              className="mt-4 inline-block rounded-lg bg-rose-gold-600 px-6 py-2 text-sm font-semibold text-white hover:bg-rose-gold-500"
             >
               Back to workflows
             </a>
@@ -159,7 +159,7 @@ function NewWorkflowPage() {
                   onClick={() => setTriggerType(t.value)}
                   className={`rounded-lg border p-4 text-left ${
                     triggerType === t.value
-                      ? "border-indigo-600 ring-2 ring-indigo-600"
+                      ? "border-rose-gold-600 ring-2 ring-rose-gold-600"
                       : "border-gray-200 dark:border-gray-800"
                   }`}
                 >
@@ -212,7 +212,7 @@ function NewWorkflowPage() {
                   >
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blush-100 text-xs font-bold text-rose-gold-700 dark:bg-rose-gold-950 dark:text-rose-gold-300">
                           {i + 1}
                         </span>
                         <span className="font-medium">
@@ -294,7 +294,7 @@ function NewWorkflowPage() {
                       type="button"
                       onClick={addStep}
                       disabled={!newStepProvider || !newStepOperation}
-                      className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500 disabled:opacity-50"
+                      className="rounded-lg bg-rose-gold-600 px-4 py-2 text-sm font-semibold text-white hover:bg-rose-gold-500 disabled:opacity-50"
                     >
                       Add
                     </button>
@@ -325,7 +325,7 @@ function NewWorkflowPage() {
               type="button"
               onClick={handleSave}
               disabled={saving || !name.trim()}
-              className="rounded-lg bg-indigo-600 px-6 py-2 text-sm font-semibold text-white hover:bg-indigo-500 disabled:opacity-50"
+              className="rounded-lg bg-rose-gold-600 px-6 py-2 text-sm font-semibold text-white hover:bg-rose-gold-500 disabled:opacity-50"
             >
               {saving ? "Saving..." : "Save workflow"}
             </button>

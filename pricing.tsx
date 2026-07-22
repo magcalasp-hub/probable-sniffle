@@ -80,7 +80,7 @@ function PricingPage() {
               key={plan.name}
               className={`rounded-2xl border p-8 ${
                 plan.highlighted
-                  ? "border-indigo-600 ring-2 ring-indigo-600"
+                  ? "border-rose-gold-600 ring-2 ring-rose-gold-600"
                   : "border-gray-200 dark:border-gray-800"
               }`}
             >
@@ -100,7 +100,7 @@ function PricingPage() {
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm">
                     <svg
-                      className="mt-0.5 h-4 w-4 flex-shrink-0 text-indigo-600"
+                      className="mt-0.5 h-4 w-4 flex-shrink-0 text-rose-gold-600"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={2}
@@ -120,7 +120,7 @@ function PricingPage() {
                 href={plan.name === "Enterprise" ? "/contact" : "/signup"}
                 className={`mt-8 block rounded-lg px-6 py-3 text-center text-sm font-semibold ${
                   plan.highlighted
-                    ? "bg-indigo-600 text-white hover:bg-indigo-500"
+                    ? "bg-rose-gold-600 text-white hover:bg-rose-gold-500"
                     : "border border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800"
                 }`}
               >

@@ -99,7 +99,7 @@ function DocsPage() {
         <div className="mt-16 grid gap-12 md:grid-cols-2">
           {sections.map((section) => (
             <div key={section.title}>
-              <h2 className="text-xl font-bold text-indigo-600">
+              <h2 className="text-xl font-bold text-rose-gold-600">
                 {section.title}
               </h2>
               <ul className="mt-6 space-y-6">
@@ -123,7 +123,7 @@ function DocsPage() {
           </p>
           <a
             href="#"
-            className="mt-4 inline-block text-sm font-medium text-indigo-600 hover:underline"
+            className="mt-4 inline-block text-sm font-medium text-rose-gold-600 hover:underline"
           >
             Contact support →
           </a>

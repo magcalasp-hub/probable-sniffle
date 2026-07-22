@@ -60,7 +60,7 @@ function WorkflowsPage() {
           </div>
           <a
             href="/dashboard/workflows/new"
-            className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+            className="rounded-lg bg-rose-gold-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-rose-gold-500"
           >
             New workflow
           </a>
@@ -75,7 +75,7 @@ function WorkflowsPage() {
             </p>
             <a
               href="/dashboard/workflows/new"
-              className="mt-4 inline-block text-sm font-medium text-indigo-600 hover:underline"
+              className="mt-4 inline-block text-sm font-medium text-rose-gold-600 hover:underline"
             >
               Create workflow →
             </a>

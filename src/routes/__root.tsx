@@ -26,7 +26,7 @@ export const Route = createRootRoute({
     <div className="flex min-h-dvh flex-col items-center justify-center gap-4">
       <h1 className="text-4xl font-bold">404</h1>
       <p className="text-gray-600 dark:text-gray-400">Page not found</p>
-      <a href="/" className="text-indigo-600 hover:underline">Go home</a>
+      <a href="/" className="text-rose-gold-600 hover:underline">Go home</a>
     </div>
   ),
   component: RootComponent,
@@ -41,7 +41,7 @@ export const Route = createRootRoute({
           {error instanceof Error ? error.message : String(error)}
         </pre>
       )}
-      <a href="/" className="text-indigo-600 hover:underline">Go home</a>
+      <a href="/" className="text-rose-gold-600 hover:underline">Go home</a>
     </div>
   ),
 });
@@ -78,7 +78,7 @@ function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-950/80">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-8">
-          <a href="/" className="text-xl font-bold tracking-tight text-indigo-600">LoomLink</a>
+          <a href="/" className="text-xl font-bold tracking-tight text-rose-gold-600">LoomLink</a>
           <div className="hidden items-center gap-6 md:flex">
             <a href="/features" className="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Features</a>
             <a href="/pricing" className="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Pricing</a>
@@ -87,7 +87,7 @@ function SiteHeader() {
         </div>
         <div className="flex items-center gap-4">
           <a href="/login" className="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Log in</a>
-          <a href="/signup" className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">Get started</a>
+          <a href="/signup" className="rounded-lg bg-rose-gold-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-rose-gold-500">Get started</a>
         </div>
       </nav>
     </header>

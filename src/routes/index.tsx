@@ -10,17 +10,17 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 pb-24 pt-16 sm:px-6 sm:pb-32 sm:pt-24 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-block rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300">
+            <span className="inline-block rounded-full bg-blush-100 px-3 py-1 text-sm font-medium text-rose-gold-700 dark:bg-rose-gold-950 dark:text-rose-gold-300">
               Your integrations, automated
             </span>
             <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">
-              Connect your tools. <span className="text-indigo-600">Automate everything.</span>
+              Connect your tools. <span className="text-rose-gold-600">Automate everything.</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
               LoomLink connects your CRM, email, payments, bookings, and more — then automates your routine workflows.
             </p>
             <div className="mt-10 flex items-center justify-center gap-4">
-              <a href="/signup" className="rounded-lg bg-indigo-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-indigo-500">Start free trial</a>
+              <a href="/signup" className="rounded-lg bg-rose-gold-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-rose-gold-500">Start free trial</a>
               <a href="/features" className="rounded-lg border border-gray-300 px-8 py-3 text-base font-semibold text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-300">See features</a>
             </div>
           </div>
@@ -32,7 +32,7 @@ function Home() {
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {[{ label: "Integrations", value: "50+" },{ label: "Workflows automated", value: "10K+" },{ label: "Active users", value: "5K+" },{ label: "Hours saved/month", value: "40K+" }].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl font-bold text-indigo-600">{stat.value}</div>
+                <div className="text-3xl font-bold text-rose-gold-600">{stat.value}</div>
                 <div className="mt-1 text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
               </div>
             ))}
@@ -57,12 +57,12 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-indigo-600 py-24">
+      <section className="bg-rose-gold-600 py-24">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to automate your workflows?</h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-indigo-100">Start your free trial. No credit card required.</p>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-blush-100">Start your free trial. No credit card required.</p>
           <div className="mt-10">
-            <a href="/signup" className="inline-block rounded-lg bg-white px-8 py-3 text-base font-semibold text-indigo-600 shadow-sm hover:bg-indigo-50">Get started free</a>
+            <a href="/signup" className="inline-block rounded-lg bg-white px-8 py-3 text-base font-semibold text-rose-gold-600 shadow-sm hover:bg-blush-50">Get started free</a>
           </div>
         </div>
       </section>
