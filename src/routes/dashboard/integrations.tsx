@@ -88,7 +88,7 @@ function IntegrationsPage() {
       <div className="p-6 sm:p-8">
         <div className="mb-8">
           <h1 className="text-2xl font-bold">Integrations</h1>
-          <p className="mt-1 text-sm text-warm-600 dark:text-warm-400">
+          <p className="mt-1 text-sm text-warm-600 dark:text-warm-600">
             Connect your tools to LoomLink. One click to enable.
           </p>
         </div>
@@ -100,7 +100,7 @@ function IntegrationsPage() {
               {integrations.map((int) => (
                 <div
                   key={int.id}
-                  className="flex items-center justify-between rounded-lg border border-warm-200 p-4 dark:border-warm-800"
+                  className="flex items-center justify-between rounded-lg border border-warm-200 p-4 dark:border-cream-200"
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">
@@ -141,7 +141,7 @@ function IntegrationsPage() {
                 return (
                   <div
                     key={connector.id}
-                    className="rounded-xl border border-warm-200 p-5 hover:shadow-sm dark:border-warm-800"
+                    className="rounded-xl border border-warm-200 p-5 hover:shadow-sm dark:border-cream-200"
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex items-center gap-3">
@@ -151,7 +151,7 @@ function IntegrationsPage() {
                           <p className="text-sm text-warm-500">
                             {connector.description}
                           </p>
-                          <span className="mt-1 inline-block rounded bg-cream-100 px-2 py-0.5 text-xs text-warm-600 dark:bg-warm-800 dark:text-warm-400">
+                          <span className="mt-1 inline-block rounded bg-cream-100 px-2 py-0.5 text-xs text-warm-600 dark:bg-cream-50 dark:text-warm-600">
                             {connector.authType === "oauth2" ? "OAuth" : "API Key"}
                           </span>
                         </div>
@@ -179,11 +179,11 @@ function IntegrationsPage() {
 
         {selectedConnector && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-            <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-xl dark:bg-warm-700">
+            <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-xl dark:bg-cream-50">
               <h2 className="text-lg font-bold">
                 Connect {selectedConnector.name}
               </h2>
-              <p className="mt-1 text-sm text-warm-600 dark:text-warm-400">
+              <p className="mt-1 text-sm text-warm-600 dark:text-warm-600">
                 Enter your credentials to connect.
               </p>
               {configError && (
@@ -194,7 +194,7 @@ function IntegrationsPage() {
               <form onSubmit={handleConfigSubmit} className="mt-4 space-y-4">
                 {selectedConnector.configFields.map((field) => (
                   <div key={field.key}>
-                    <label className="block text-sm font-medium text-warm-700 dark:text-warm-300">
+                    <label className="block text-sm font-medium text-warm-700 dark:text-warm-700">
                       {field.label}
                       {field.required && <span className="text-red-500">*</span>}
                     </label>
@@ -209,7 +209,7 @@ function IntegrationsPage() {
                           [field.key]: e.target.value,
                         }))
                       }
-                      className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm dark:border-warm-700 dark:bg-warm-800 dark:text-warm-100"
+                      className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm dark:border-cream-200 dark:bg-cream-50 dark:text-warm-800"
                     />
                   </div>
                 ))}
@@ -224,7 +224,7 @@ function IntegrationsPage() {
                   <button
                     type="button"
                     onClick={() => setSelectedConnector(null)}
-                    className="rounded-lg border border-warm-300 px-4 py-2 text-sm font-medium text-warm-700 hover:bg-cream-50 dark:border-warm-700 dark:text-warm-300"
+                    className="rounded-lg border border-warm-300 px-4 py-2 text-sm font-medium text-warm-700 hover:bg-cream-50 dark:border-cream-200 dark:text-warm-700"
                   >
                     Cancel
                   </button>

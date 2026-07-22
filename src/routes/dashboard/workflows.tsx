@@ -54,7 +54,7 @@ function WorkflowsPage() {
         <div className="mb-8 flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">Workflows</h1>
-            <p className="mt-1 text-sm text-warm-600 dark:text-warm-400">
+            <p className="mt-1 text-sm text-warm-600 dark:text-warm-600">
               Automate your routine processes.
             </p>
           </div>
@@ -69,8 +69,8 @@ function WorkflowsPage() {
         {loading ? (
           <p className="text-warm-500">Loading...</p>
         ) : workflows.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-warm-300 p-12 text-center dark:border-warm-700">
-            <p className="text-warm-600 dark:text-warm-400">
+          <div className="rounded-xl border border-dashed border-warm-300 p-12 text-center dark:border-cream-200">
+            <p className="text-warm-600 dark:text-warm-600">
               No workflows yet. Create your first automation.
             </p>
             <a
@@ -85,7 +85,7 @@ function WorkflowsPage() {
             {workflows.map((wf) => (
               <div
                 key={wf.id}
-                className="flex items-center justify-between rounded-lg border border-warm-200 p-4 dark:border-warm-800"
+                className="flex items-center justify-between rounded-lg border border-warm-200 p-4 dark:border-cream-200"
               >
                 <div className="flex-1">
                   <div className="flex items-center gap-3">
@@ -112,7 +112,7 @@ function WorkflowsPage() {
                   <button
                     onClick={() => handleRun(wf.id)}
                     disabled={running === wf.id}
-                    className="rounded-lg border border-warm-300 px-3 py-1.5 text-xs font-medium hover:bg-cream-50 disabled:opacity-50 dark:border-warm-700"
+                    className="rounded-lg border border-warm-300 px-3 py-1.5 text-xs font-medium hover:bg-cream-50 disabled:opacity-50 dark:border-cream-200"
                   >
                     {running === wf.id ? "Running..." : "Run"}
                   </button>

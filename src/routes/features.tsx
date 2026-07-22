@@ -90,7 +90,7 @@ function FeaturesPage() {
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Features
           </h1>
-          <p className="mt-4 text-lg text-warm-600 dark:text-warm-400">
+          <p className="mt-4 text-lg text-warm-600 dark:text-warm-600">
             Everything you need to connect your tools and automate your workflows.
           </p>
         </div>
@@ -102,10 +102,10 @@ function FeaturesPage() {
               {group.items.map((item) => (
                 <div
                   key={item.name}
-                  className="rounded-xl border border-warm-200 p-6 dark:border-warm-800"
+                  className="rounded-xl border border-warm-200 p-6 dark:border-cream-200"
                 >
                   <h3 className="font-semibold">{item.name}</h3>
-                  <p className="mt-2 text-sm leading-6 text-warm-600 dark:text-warm-400">
+                  <p className="mt-2 text-sm leading-6 text-warm-600 dark:text-warm-600">
                     {item.desc}
                   </p>
                 </div>

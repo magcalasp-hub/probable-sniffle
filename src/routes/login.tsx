@@ -40,7 +40,7 @@ function LoginPage() {
     <div className="flex min-h-[calc(100dvh-4rem)] items-center justify-center px-4 py-12">
       <div className="w-full max-w-sm">
         <h1 className="text-2xl font-bold text-center">Log in to LoomLink</h1>
-        <p className="mt-2 text-center text-sm text-warm-600 dark:text-warm-400">
+        <p className="mt-2 text-center text-sm text-warm-600 dark:text-warm-600">
           Don&apos;t have an account?{" "}
           <a href="/signup" className="text-rose-gold-600 hover:underline">
             Sign up
@@ -57,7 +57,7 @@ function LoginPage() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-warm-700 dark:text-warm-300"
+              className="block text-sm font-medium text-warm-700 dark:text-warm-700"
             >
               Email
             </label>
@@ -67,7 +67,7 @@ function LoginPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-warm-700 dark:bg-warm-800 dark:text-warm-100"
+              className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-cream-200 dark:bg-cream-50 dark:text-warm-800"
               placeholder="you@example.com"
             />
           </div>
@@ -75,7 +75,7 @@ function LoginPage() {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-warm-700 dark:text-warm-300"
+              className="block text-sm font-medium text-warm-700 dark:text-warm-700"
             >
               Password
             </label>
@@ -85,7 +85,7 @@ function LoginPage() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-warm-700 dark:bg-warm-800 dark:text-warm-100"
+              className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-cream-200 dark:bg-cream-50 dark:text-warm-800"
               placeholder="Your password"
             />
           </div>

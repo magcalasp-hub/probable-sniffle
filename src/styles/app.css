@@ -45,6 +45,6 @@
 @layer base {
   html,
   body {
-    @apply bg-cream text-warm-900 antialiased dark:bg-warm-800 dark:text-warm-100;
+    @apply bg-cream-50 text-warm-800 antialiased dark:bg-cream-50 dark:text-warm-800;
   }
 }

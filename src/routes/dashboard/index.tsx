@@ -69,7 +69,7 @@ function DashboardOverview() {
 
         <div className="mb-8">
           <h1 className="text-2xl font-bold">Dashboard</h1>
-          <p className="mt-1 text-sm text-warm-600 dark:text-warm-400">Overview of your LoomLink automations.</p>
+          <p className="mt-1 text-sm text-warm-600 dark:text-warm-600">Overview of your LoomLink automations.</p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -79,8 +79,8 @@ function DashboardOverview() {
             { label: "Runs Today", value: "0", change: "No runs yet" },
             { label: "Plan", value: "Starter", change: "Free tier" },
           ].map((stat) => (
-            <div key={stat.label} className="rounded-xl border border-warm-200 p-6 dark:border-warm-800">
-              <p className="text-sm text-warm-600 dark:text-warm-400">{stat.label}</p>
+            <div key={stat.label} className="rounded-xl border border-warm-200 p-6 dark:border-cream-200">
+              <p className="text-sm text-warm-600 dark:text-warm-600">{stat.label}</p>
               <p className="mt-2 text-3xl font-bold">{stat.value}</p>
               <p className="mt-1 text-xs text-warm-500">{stat.change}</p>
             </div>
@@ -90,21 +90,21 @@ function DashboardOverview() {
         <div className="mt-8">
           <h2 className="text-lg font-semibold">Quick actions</h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            <a href="/dashboard/integrations" className="rounded-xl border border-warm-200 p-6 transition-colors hover:border-rose-gold-300 hover:shadow-sm dark:border-warm-800 dark:hover:border-rose-gold-700">
+            <a href="/dashboard/integrations" className="rounded-xl border border-warm-200 p-6 transition-colors hover:border-rose-gold-300 hover:shadow-sm dark:border-cream-200 dark:hover:border-rose-gold-700">
               <h3 className="font-semibold">Connect an integration</h3>
-              <p className="mt-1 text-sm text-warm-600 dark:text-warm-400">Link Stripe, Gmail, Slack, and more to get started.</p>
+              <p className="mt-1 text-sm text-warm-600 dark:text-warm-600">Link Stripe, Gmail, Slack, and more to get started.</p>
             </a>
-            <a href="/dashboard/workflows" className="rounded-xl border border-warm-200 p-6 transition-colors hover:border-rose-gold-300 hover:shadow-sm dark:border-warm-800 dark:hover:border-rose-gold-700">
+            <a href="/dashboard/workflows" className="rounded-xl border border-warm-200 p-6 transition-colors hover:border-rose-gold-300 hover:shadow-sm dark:border-cream-200 dark:hover:border-rose-gold-700">
               <h3 className="font-semibold">Create a workflow</h3>
-              <p className="mt-1 text-sm text-warm-600 dark:text-warm-400">Build your first automation to save time.</p>
+              <p className="mt-1 text-sm text-warm-600 dark:text-warm-600">Build your first automation to save time.</p>
             </a>
           </div>
         </div>
 
         <div className="mt-8">
           <h2 className="text-lg font-semibold">Recent activity</h2>
-          <div className="mt-4 rounded-xl border border-dashed border-warm-300 p-12 text-center dark:border-warm-700">
-            <p className="text-warm-600 dark:text-warm-400">{isNewUser ? "Welcome! Start by connecting your first integration." : "No activity yet. Create and run a workflow to see results here."}</p>
+          <div className="mt-4 rounded-xl border border-dashed border-warm-300 p-12 text-center dark:border-cream-200">
+            <p className="text-warm-600 dark:text-warm-600">{isNewUser ? "Welcome! Start by connecting your first integration." : "No activity yet. Create and run a workflow to see results here."}</p>
             <a href="/dashboard/integrations" className="mt-4 inline-block text-sm font-medium text-rose-gold-600 hover:underline">Browse integrations →</a>
           </div>
         </div>

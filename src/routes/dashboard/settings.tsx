@@ -52,7 +52,7 @@ function SettingsPage() {
       <div className="p-6 sm:p-8">
         <div className="mb-8">
           <h1 className="text-2xl font-bold">Settings</h1>
-          <p className="mt-1 text-sm text-warm-600 dark:text-warm-400">Manage your account and billing.</p>
+          <p className="mt-1 text-sm text-warm-600 dark:text-warm-600">Manage your account and billing.</p>
         </div>
 
         {billing && !billing.stripeEnabled && (
@@ -62,28 +62,28 @@ function SettingsPage() {
         )}
 
         <div className="space-y-8">
-          <section className="rounded-xl border border-warm-200 p-6 dark:border-warm-800">
+          <section className="rounded-xl border border-warm-200 p-6 dark:border-cream-200">
             <h2 className="text-lg font-semibold">Profile</h2>
-            <p className="mt-1 text-sm text-warm-600 dark:text-warm-400">Your account information.</p>
+            <p className="mt-1 text-sm text-warm-600 dark:text-warm-600">Your account information.</p>
             <div className="mt-4 space-y-4">
               <div>
-                <label className="block text-sm font-medium text-warm-700 dark:text-warm-300">Name</label>
-                <input type="text" disabled className="mt-1 block w-full max-w-sm rounded-lg border border-warm-300 px-3 py-2 text-sm dark:border-warm-700 dark:bg-warm-800" placeholder="Your name" />
+                <label className="block text-sm font-medium text-warm-700 dark:text-warm-700">Name</label>
+                <input type="text" disabled className="mt-1 block w-full max-w-sm rounded-lg border border-warm-300 px-3 py-2 text-sm dark:border-cream-200 dark:bg-cream-50" placeholder="Your name" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-warm-700 dark:text-warm-300">Email</label>
-                <input type="email" disabled className="mt-1 block w-full max-w-sm rounded-lg border border-warm-300 px-3 py-2 text-sm dark:border-warm-700 dark:bg-warm-800" placeholder="you@example.com" />
+                <label className="block text-sm font-medium text-warm-700 dark:text-warm-700">Email</label>
+                <input type="email" disabled className="mt-1 block w-full max-w-sm rounded-lg border border-warm-300 px-3 py-2 text-sm dark:border-cream-200 dark:bg-cream-50" placeholder="you@example.com" />
               </div>
             </div>
           </section>
 
-          <section className="rounded-xl border border-warm-200 p-6 dark:border-warm-800">
+          <section className="rounded-xl border border-warm-200 p-6 dark:border-cream-200">
             <h2 className="text-lg font-semibold">Plan</h2>
             {loading ? (
               <p className="mt-2 text-sm text-warm-500">Loading billing info…</p>
             ) : currentPlan ? (
               <div className="mt-2">
-                <p className="text-sm text-warm-600 dark:text-warm-400">You&apos;re on the <strong>{currentPlan.name}</strong> plan{currentPlan.price > 0 && ` ($${currentPlan.price}/mo)`}.</p>
+                <p className="text-sm text-warm-600 dark:text-warm-600">You&apos;re on the <strong>{currentPlan.name}</strong> plan{currentPlan.price > 0 && ` ($${currentPlan.price}/mo)`}.</p>
                 {billing?.currentPeriodEnd && <p className="mt-1 text-xs text-warm-500">Current period ends: {new Date(billing.currentPeriodEnd).toLocaleDateString()}</p>}
                 {billing?.status && billing.status !== "active" && <p className="mt-1 text-xs font-medium text-yellow-600 dark:text-yellow-400">Status: {billing.status}</p>}
               </div>
@@ -93,10 +93,10 @@ function SettingsPage() {
               {plans.map((plan) => {
                 const isCurrent = plan.id === currentPlan?.id;
                 return (
-                  <div key={plan.id} className={`rounded-lg border p-4 ${isCurrent ? "border-rose-gold-500 bg-blush-50 dark:border-rose-gold-600 dark:bg-rose-gold-950" : "border-warm-200 dark:border-warm-700"}`}>
+                  <div key={plan.id} className={`rounded-lg border p-4 ${isCurrent ? "border-rose-gold-500 bg-blush-50 dark:border-rose-gold-600 dark:bg-rose-gold-950" : "border-warm-200 dark:border-cream-200"}`}>
                     <h3 className="font-semibold">{plan.name}</h3>
                     <p className="mt-1 text-2xl font-bold">{plan.price > 0 ? `$${plan.price}` : "Custom"}<span className="text-sm font-normal text-warm-500">{plan.price > 0 ? "/mo" : ""}</span></p>
-                    <ul className="mt-3 space-y-1 text-xs text-warm-600 dark:text-warm-400">
+                    <ul className="mt-3 space-y-1 text-xs text-warm-600 dark:text-warm-600">
                       {plan.features.map((f) => (
                         <li key={f} className="flex items-center gap-1">
                           <svg className="h-3 w-3 shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
