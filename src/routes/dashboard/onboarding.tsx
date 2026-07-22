@@ -79,7 +79,7 @@ function OnboardingPage() {
         <div className="mb-8 flex items-center justify-center gap-2">
           {(["welcome", "connect", "workflow", "done"] as const).map((s, i) => (
             <div key={s} className="flex items-center gap-2">
-              <div className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold ${step === s ? "bg-rose-gold-600 text-white" : ["connect", "workflow", "done"].indexOf(s) <= ["connect", "workflow", "done"].indexOf(step) ? "bg-blush-100 text-rose-gold-700 dark:bg-rose-gold-900 dark:text-blush-200" : "bg-warm-100 text-warm-400 dark:bg-warm-800"}`}>
+              <div className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold ${step === s ? "bg-rose-gold-600 text-white" : ["connect", "workflow", "done"].indexOf(s) <= ["connect", "workflow", "done"].indexOf(step) ? "bg-blush-100 text-rose-gold-700 dark:bg-rose-gold-900 dark:text-blush-200" : "bg-cream-100 text-warm-400 dark:bg-warm-800"}`}>
                 {["connect", "workflow", "done"].indexOf(s) <= ["connect", "workflow", "done"].indexOf(step) && step !== s ? "✓" : i + 1}
               </div>
               {i < 3 && <div className={`h-0.5 w-8 ${["connect", "workflow", "done"].indexOf(s) < ["connect", "workflow", "done"].indexOf(step) ? "bg-rose-gold-500" : "bg-warm-200 dark:bg-warm-700"}`} />}
@@ -117,7 +117,7 @@ function OnboardingPage() {
               {connectors.slice(0, 4).map((connector) => (
                 <button key={connector.id} onClick={() => handleConnectIntegration(connector.id)} className="rounded-xl border border-warm-200 p-4 text-left transition-colors hover:border-rose-gold-300 hover:bg-blush-50 dark:border-warm-800 dark:hover:border-rose-gold-700 dark:hover:bg-rose-gold-950">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-warm-100 text-lg dark:bg-warm-800">{connector.icon}</span>
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-cream-100 text-lg dark:bg-warm-800">{connector.icon}</span>
                     <div><h3 className="font-semibold">{connector.name}</h3><p className="text-xs text-warm-500">{connector.authType === "api_key" ? "API Key" : "OAuth"}</p></div>
                   </div>
                   <p className="mt-2 text-xs text-warm-600 dark:text-warm-400">{connector.description}</p>

@@ -149,7 +149,7 @@ function PricingPage() {
                   className={`mt-8 block rounded-lg px-6 py-3 text-center text-sm font-semibold ${
                     plan.highlighted
                       ? "bg-rose-gold-600 text-white hover:bg-rose-gold-500"
-                      : "border border-warm-300 text-warm-700 hover:bg-warm-50 dark:border-warm-700 dark:text-warm-300 dark:hover:bg-warm-800"
+                      : "border border-warm-300 text-warm-700 hover:bg-cream-50 dark:border-warm-700 dark:text-warm-300 dark:hover:bg-warm-800"
                   }`}
                 >
                   {plan.cta}
@@ -160,7 +160,7 @@ function PricingPage() {
                   className={`mt-8 block rounded-lg px-6 py-3 text-center text-sm font-semibold ${
                     plan.highlighted
                       ? "bg-rose-gold-600 text-white hover:bg-rose-gold-500"
-                      : "border border-warm-300 text-warm-700 hover:bg-warm-50 dark:border-warm-700 dark:text-warm-300 dark:hover:bg-warm-800"
+                      : "border border-warm-300 text-warm-700 hover:bg-cream-50 dark:border-warm-700 dark:text-warm-300 dark:hover:bg-warm-800"
                   }`}
                 >
                   {plan.cta}

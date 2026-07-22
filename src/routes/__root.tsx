@@ -75,7 +75,7 @@ function RootDocument({ children }: { children: ReactNode }) {
 function SiteHeader() {
   const year = new Date().getFullYear();
   return (
-    <header className="sticky top-0 z-50 border-b border-warm-200 bg-white/80 backdrop-blur-sm dark:border-warm-800 dark:bg-warm-950/80">
+    <header className="sticky top-0 z-50 border-b border-warm-200 bg-cream/80 backdrop-blur-sm dark:border-warm-800 dark:bg-warm-800/80">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-8">
           <a href="/" className="text-xl font-bold tracking-tight text-rose-gold-600">LoomLink</a>
@@ -97,7 +97,7 @@ function SiteHeader() {
 function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-warm-200 bg-warm-50 dark:border-warm-800 dark:bg-warm-950">
+    <footer className="border-t border-warm-200 bg-cream-50 dark:border-warm-800 dark:bg-warm-800">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div>

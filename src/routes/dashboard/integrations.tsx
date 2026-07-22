@@ -151,7 +151,7 @@ function IntegrationsPage() {
                           <p className="text-sm text-warm-500">
                             {connector.description}
                           </p>
-                          <span className="mt-1 inline-block rounded bg-warm-100 px-2 py-0.5 text-xs text-warm-600 dark:bg-warm-800 dark:text-warm-400">
+                          <span className="mt-1 inline-block rounded bg-cream-100 px-2 py-0.5 text-xs text-warm-600 dark:bg-warm-800 dark:text-warm-400">
                             {connector.authType === "oauth2" ? "OAuth" : "API Key"}
                           </span>
                         </div>
@@ -179,7 +179,7 @@ function IntegrationsPage() {
 
         {selectedConnector && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-            <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-xl dark:bg-warm-900">
+            <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-xl dark:bg-warm-700">
               <h2 className="text-lg font-bold">
                 Connect {selectedConnector.name}
               </h2>
@@ -224,7 +224,7 @@ function IntegrationsPage() {
                   <button
                     type="button"
                     onClick={() => setSelectedConnector(null)}
-                    className="rounded-lg border border-warm-300 px-4 py-2 text-sm font-medium text-warm-700 hover:bg-warm-50 dark:border-warm-700 dark:text-warm-300"
+                    className="rounded-lg border border-warm-300 px-4 py-2 text-sm font-medium text-warm-700 hover:bg-cream-50 dark:border-warm-700 dark:text-warm-300"
                   >
                     Cancel
                   </button>

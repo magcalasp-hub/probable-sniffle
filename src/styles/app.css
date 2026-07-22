@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #FFF8E7;
-  --color-cream-50: #FFFDF5;
-  --color-cream-100: #FFF8E7;
+  --color-cream-50: #FFFBF0;
+  --color-cream-100: #FFF6E0;
+  --color-cream-200: #F5E8CC;
+  --color-cream: #FFF3DA;
   --color-rose-gold: #B76E79;
   --color-rose-gold-50: #FDF2F4;
   --color-rose-gold-100: #FBE4E8;
@@ -44,6 +45,6 @@
 @layer base {
   html,
   body {
-    @apply bg-cream text-warm-900 antialiased dark:bg-warm-950 dark:text-warm-100;
+    @apply bg-cream text-warm-900 antialiased dark:bg-warm-800 dark:text-warm-100;
   }
 }

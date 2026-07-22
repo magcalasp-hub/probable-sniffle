@@ -21,13 +21,13 @@ function Home() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-4">
               <a href="/signup" className="rounded-lg bg-rose-gold-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-rose-gold-500">Start free trial</a>
-              <a href="/features" className="rounded-lg border border-warm-300 px-8 py-3 text-base font-semibold text-warm-700 hover:bg-warm-50 dark:border-warm-700 dark:text-warm-300">See features</a>
+              <a href="/features" className="rounded-lg border border-warm-300 px-8 py-3 text-base font-semibold text-warm-700 hover:bg-cream-50 dark:border-warm-700 dark:text-warm-300">See features</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-warm-200 bg-warm-50 dark:border-warm-800 dark:bg-warm-900">
+      <section className="border-y border-warm-200 bg-cream-50 dark:border-warm-800 dark:bg-warm-700">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {[{ label: "Integrations", value: "50+" },{ label: "Workflows automated", value: "10K+" },{ label: "Active users", value: "5K+" },{ label: "Hours saved/month", value: "40K+" }].map((stat) => (

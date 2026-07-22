@@ -121,10 +121,10 @@ function DocsPage() {
 
         <div id="action-chaining" className="mt-20 scroll-mt-20">
           <h2 className="text-2xl font-bold">Template Variables</h2>
-          <p className="mt-2 text-sm text-warm-600 dark:text-warm-400">Use <code className="rounded bg-warm-100 px-1.5 py-0.5 text-xs font-mono dark:bg-warm-800">{`{{variable}}`}</code> syntax to reference data from triggers or previous steps.</p>
+          <p className="mt-2 text-sm text-warm-600 dark:text-warm-400">Use <code className="rounded bg-cream-100 px-1.5 py-0.5 text-xs font-mono dark:bg-warm-800">{`{{variable}}`}</code> syntax to reference data from triggers or previous steps.</p>
           <div className="mt-6 overflow-x-auto rounded-xl border border-warm-200 dark:border-warm-800">
             <table className="min-w-full divide-y divide-warm-200 text-sm dark:divide-warm-800">
-              <thead className="bg-warm-50 dark:bg-warm-900">
+              <thead className="bg-cream-50 dark:bg-warm-700">
                 <tr><th className="px-4 py-3 text-left font-semibold">Pattern</th><th className="px-4 py-3 text-left font-semibold">Description</th></tr>
               </thead>
               <tbody className="divide-y divide-warm-200 dark:divide-warm-800">
@@ -142,7 +142,7 @@ function DocsPage() {
           <p className="mt-2 text-sm text-warm-600 dark:text-warm-400">Standard cron syntax with 5 fields: minute hour day-of-month month day-of-week.</p>
           <div className="mt-6 overflow-x-auto rounded-xl border border-warm-200 dark:border-warm-800">
             <table className="min-w-full divide-y divide-warm-200 text-sm dark:divide-warm-800">
-              <thead className="bg-warm-50 dark:bg-warm-900">
+              <thead className="bg-cream-50 dark:bg-warm-700">
                 <tr><th className="px-4 py-3 text-left font-semibold">Expression</th><th className="px-4 py-3 text-left font-semibold">Meaning</th></tr>
               </thead>
               <tbody className="divide-y divide-warm-200 dark:divide-warm-800">
@@ -157,7 +157,7 @@ function DocsPage() {
           </div>
         </div>
 
-        <div className="mt-16 rounded-xl border border-warm-200 bg-warm-50 p-8 text-center dark:border-warm-800 dark:bg-warm-900">
+        <div className="mt-16 rounded-xl border border-warm-200 bg-cream-50 p-8 text-center dark:border-warm-800 dark:bg-warm-700">
           <h2 className="text-xl font-bold">Need help?</h2>
           <p className="mt-2 text-warm-600 dark:text-warm-400">Can&apos;t find what you&apos;re looking for? Reach out to our support team.</p>
           <a href="#" className="mt-4 inline-block text-sm font-medium text-rose-gold-600 hover:underline">Contact support →</a>

@@ -112,7 +112,7 @@ function WorkflowsPage() {
                   <button
                     onClick={() => handleRun(wf.id)}
                     disabled={running === wf.id}
-                    className="rounded-lg border border-warm-300 px-3 py-1.5 text-xs font-medium hover:bg-warm-50 disabled:opacity-50 dark:border-warm-700"
+                    className="rounded-lg border border-warm-300 px-3 py-1.5 text-xs font-medium hover:bg-cream-50 disabled:opacity-50 dark:border-warm-700"
                   >
                     {running === wf.id ? "Running..." : "Run"}
                   </button>
