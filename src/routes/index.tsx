@@ -9,25 +9,33 @@ function Home() {
     <>
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 pb-24 pt-16 sm:px-6 sm:pb-32 sm:pt-24 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-block rounded-full bg-blush-100 px-3 py-1 text-sm font-medium text-rose-gold-700 dark:bg-rose-gold-950 dark:text-rose-gold-300">
-              Your integrations, automated
-            </span>
-            <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">
-              Connect your tools. <span className="text-rose-gold-600">Automate everything.</span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-warm-600 dark:text-warm-600">
-              LoomLink connects your CRM, email, payments, bookings, and more — then automates your routine workflows.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-4">
-              <a href="/signup" className="rounded-lg bg-rose-gold-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-rose-gold-500">Start free trial</a>
-              <a href="/features" className="rounded-lg border border-warm-300 px-8 py-3 text-base font-semibold text-warm-700 hover:bg-cream-50 dark:border-cream-200 dark:text-warm-700">See features</a>
+          <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
+            <div className="flex-1 text-center lg:text-left">
+              <span className="inline-block rounded-full bg-blush-100 px-3 py-1 text-sm font-medium text-rose-gold-700 dark:bg-rose-gold-950 dark:text-rose-gold-300">
+                Your integrations, automated
+              </span>
+              <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">
+                Connect your tools. <span className="text-rose-gold-600">Automate everything.</span>
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-warm-600 dark:text-warm-600">
+                LoomLink connects your CRM, email, payments, bookings, and more — then automates your routine workflows.
+              </p>
+              <div className="mt-10 flex items-center justify-center gap-4 lg:justify-start">
+                <a href="/signup" className="rounded-lg bg-rose-gold-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-rose-gold-500">Start free trial</a>
+                <a href="/features" className="rounded-lg border border-warm-300 px-8 py-3 text-base font-semibold text-warm-700 hover:bg-cream-50 dark:border-cream-200 dark:text-warm-700">See features</a>
+              </div>
+            </div>
+            <div className="flex-1">
+              <img src="/images/hero-illustration.png" alt="LoomLink integration platform illustration" className="mx-auto w-full max-w-md drop-shadow-lg lg:max-w-xl" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-warm-200 bg-cream-50 dark:border-cream-200 dark:bg-cream-50">
+      <section
+        className="border-y border-warm-200 bg-cream-50 dark:border-cream-200 dark:bg-cream-50"
+        style={{ backgroundImage: "url(/images/bg-texture.png)", backgroundSize: "256px", backgroundRepeat: "repeat", backgroundBlendMode: "overlay", opacity: 0.9 }}
+      >
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {[{ label: "Integrations", value: "50+" },{ label: "Workflows automated", value: "10K+" },{ label: "Active users", value: "5K+" },{ label: "Hours saved/month", value: "40K+" }].map((stat) => (
@@ -47,8 +55,16 @@ function Home() {
             <p className="mt-4 text-lg text-warm-600 dark:text-warm-600">From simple connections to complex multi-step workflows.</p>
           </div>
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[{ title: "One-click integrations", desc: "Connect Stripe, Gmail, Slack, and more with a single click." },{ title: "Visual workflow builder", desc: "Drag, drop, and configure without writing code." },{ title: "Schedule & triggers", desc: "Run on cron, fire from webhooks, or trigger manually." },{ title: "Real-time monitoring", desc: "Watch workflows run in real-time. Get alerts on failures." },{ title: "Secure by default", desc: "OAuth encrypted at rest. HTTP-only cookies. SOC 2." },{ title: "Team collaboration", desc: "Share workflows. Set permissions. Audit changes." }].map((f) => (
+            {[
+              { title: "One-click integrations", desc: "Connect Stripe, Gmail, Slack, and more with a single click.", img: "/images/feature-connect.png" },
+              { title: "Visual workflow builder", desc: "Drag, drop, and configure without writing code.", img: "/images/feature-automate.png" },
+              { title: "Schedule & triggers", desc: "Run on cron, fire from webhooks, or trigger manually.", img: "/images/feature-flow.png" },
+              { title: "Real-time monitoring", desc: "Watch workflows run in real-time. Get alerts on failures.", img: "/images/feature-flow.png" },
+              { title: "Secure by default", desc: "OAuth encrypted at rest. HTTP-only cookies. SOC 2.", img: "/images/feature-trust.png" },
+              { title: "Team collaboration", desc: "Share workflows. Set permissions. Audit changes.", img: null },
+            ].map((f) => (
               <div key={f.title} className="rounded-xl border border-warm-200 p-6 dark:border-cream-200">
+                {f.img && <img src={f.img} alt={f.title} className="mb-4 h-12 w-12 object-contain" />}
                 <h3 className="text-lg font-semibold">{f.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-warm-600 dark:text-warm-600">{f.desc}</p>
               </div>
