@@ -43,7 +43,7 @@ function SignupPage() {
         <h1 className="text-2xl font-bold text-center">
           Create your LoomLink account
         </h1>
-        <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+        <p className="mt-2 text-center text-sm text-warm-600 dark:text-warm-400">
           Already have an account?{" "}
           <a href="/login" className="text-rose-gold-600 hover:underline">
             Log in
@@ -60,7 +60,7 @@ function SignupPage() {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+              className="block text-sm font-medium text-warm-700 dark:text-warm-300"
             >
               Name
             </label>
@@ -69,7 +69,7 @@ function SignupPage() {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-warm-700 dark:bg-warm-800 dark:text-warm-100"
               placeholder="Your name"
             />
           </div>
@@ -77,7 +77,7 @@ function SignupPage() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+              className="block text-sm font-medium text-warm-700 dark:text-warm-300"
             >
               Email
             </label>
@@ -87,7 +87,7 @@ function SignupPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-warm-700 dark:bg-warm-800 dark:text-warm-100"
               placeholder="you@example.com"
             />
           </div>
@@ -95,7 +95,7 @@ function SignupPage() {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+              className="block text-sm font-medium text-warm-700 dark:text-warm-300"
             >
               Password
             </label>
@@ -106,7 +106,7 @@ function SignupPage() {
               minLength={8}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm shadow-sm focus:border-rose-gold-500 focus:outline-none focus:ring-1 focus:ring-rose-gold-500 dark:border-warm-700 dark:bg-warm-800 dark:text-warm-100"
               placeholder="At least 8 characters"
             />
           </div>
@@ -119,7 +119,7 @@ function SignupPage() {
             {loading ? "Creating account..." : "Create account"}
           </button>
 
-          <p className="text-xs text-gray-500 dark:text-gray-500">
+          <p className="text-xs text-warm-500 dark:text-warm-500">
             By signing up, you agree to our Terms of Service and Privacy Policy.
           </p>
 

@@ -101,7 +101,7 @@ function NewWorkflowPage() {
       <div className="p-6 sm:p-8">
         <div className="mb-8">
           <h1 className="text-2xl font-bold">New workflow</h1>
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-1 text-sm text-warm-600 dark:text-warm-400">
             Create an automated workflow.
           </p>
         </div>
@@ -109,7 +109,7 @@ function NewWorkflowPage() {
         <div className="max-w-2xl space-y-8">
           {/* Name */}
           <section>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label className="block text-sm font-medium text-warm-700 dark:text-warm-300">
               Workflow name *
             </label>
             <input
@@ -117,21 +117,21 @@ function NewWorkflowPage() {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm dark:border-warm-700 dark:bg-warm-800 dark:text-warm-100"
               placeholder="e.g. Daily payment reconciliation"
             />
           </section>
 
           {/* Description */}
           <section>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label className="block text-sm font-medium text-warm-700 dark:text-warm-300">
               Description
             </label>
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={2}
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+              className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm dark:border-warm-700 dark:bg-warm-800 dark:text-warm-100"
               placeholder="What does this workflow do?"
             />
           </section>
@@ -160,27 +160,27 @@ function NewWorkflowPage() {
                   className={`rounded-lg border p-4 text-left ${
                     triggerType === t.value
                       ? "border-rose-gold-600 ring-2 ring-rose-gold-600"
-                      : "border-gray-200 dark:border-gray-800"
+                      : "border-warm-200 dark:border-warm-800"
                   }`}
                 >
                   <div className="font-medium">{t.label}</div>
-                  <div className="mt-1 text-xs text-gray-500">{t.desc}</div>
+                  <div className="mt-1 text-xs text-warm-500">{t.desc}</div>
                 </button>
               ))}
             </div>
             {triggerType === "schedule" && (
               <div className="mt-3">
-                <label className="block text-sm text-gray-600 dark:text-gray-400">
+                <label className="block text-sm text-warm-600 dark:text-warm-400">
                   Cron expression
                 </label>
                 <input
                   type="text"
                   value={cronExpr}
                   onChange={(e) => setCronExpr(e.target.value)}
-                  className="mt-1 block w-full max-w-xs rounded-lg border border-gray-300 px-3 py-2 text-sm font-mono dark:border-gray-700 dark:bg-gray-800"
+                  className="mt-1 block w-full max-w-xs rounded-lg border border-warm-300 px-3 py-2 text-sm font-mono dark:border-warm-700 dark:bg-warm-800"
                   placeholder="0 */6 * * *"
                 />
-                <p className="mt-1 text-xs text-gray-400">
+                <p className="mt-1 text-xs text-warm-400">
                   Examples: 0 */6 * * * (every 6h), 0 9 * * 1-5 (weekdays 9am)
                 </p>
               </div>
@@ -190,14 +190,14 @@ function NewWorkflowPage() {
           {/* Actions */}
           <section>
             <h2 className="text-lg font-semibold">Actions</h2>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-warm-500">
               Steps are executed in order. Outputs are available as
               {" "}{"{{step_name.field}}"} in later steps.
             </p>
 
             {actions.length === 0 && !showAddStep && (
-              <div className="mt-4 rounded-lg border border-dashed border-gray-300 p-8 text-center dark:border-gray-700">
-                <p className="text-sm text-gray-500">
+              <div className="mt-4 rounded-lg border border-dashed border-warm-300 p-8 text-center dark:border-warm-700">
+                <p className="text-sm text-warm-500">
                   No actions yet. Add your first step.
                 </p>
               </div>
@@ -208,7 +208,7 @@ function NewWorkflowPage() {
                 {actions.map((step, i) => (
                   <div
                     key={step.id}
-                    className="flex items-start justify-between rounded-lg border border-gray-200 p-4 dark:border-gray-800"
+                    className="flex items-start justify-between rounded-lg border border-warm-200 p-4 dark:border-warm-800"
                   >
                     <div>
                       <div className="flex items-center gap-2">
@@ -219,7 +219,7 @@ function NewWorkflowPage() {
                           {step.label || `${step.providerId}: ${step.operationId}`}
                         </span>
                       </div>
-                      <p className="ml-8 mt-1 text-xs text-gray-500">
+                      <p className="ml-8 mt-1 text-xs text-warm-500">
                         {step.providerId} → {step.operationId}
                       </p>
                     </div>
@@ -235,11 +235,11 @@ function NewWorkflowPage() {
             )}
 
             {showAddStep ? (
-              <div className="mt-4 rounded-lg border border-gray-200 p-4 dark:border-gray-800">
+              <div className="mt-4 rounded-lg border border-warm-200 p-4 dark:border-warm-800">
                 <h3 className="mb-3 text-sm font-semibold">Add step</h3>
                 <div className="space-y-3">
                   <div>
-                    <label className="block text-xs text-gray-600">
+                    <label className="block text-xs text-warm-600">
                       Connector
                     </label>
                     <select
@@ -248,7 +248,7 @@ function NewWorkflowPage() {
                         setNewStepProvider(e.target.value);
                         setNewStepOperation("");
                       }}
-                      className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800"
+                      className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm dark:border-warm-700 dark:bg-warm-800"
                     >
                       <option value="">Select...</option>
                       {connectors.map((c) => (
@@ -260,13 +260,13 @@ function NewWorkflowPage() {
                   </div>
                   {newStepProvider && operationsForProvider && (
                     <div>
-                      <label className="block text-xs text-gray-600">
+                      <label className="block text-xs text-warm-600">
                         Operation
                       </label>
                       <select
                         value={newStepOperation}
                         onChange={(e) => setNewStepOperation(e.target.value)}
-                        className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800"
+                        className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm dark:border-warm-700 dark:bg-warm-800"
                       >
                         <option value="">Select...</option>
                         {operationsForProvider.map((op) => (
@@ -278,14 +278,14 @@ function NewWorkflowPage() {
                     </div>
                   )}
                   <div>
-                    <label className="block text-xs text-gray-600">
+                    <label className="block text-xs text-warm-600">
                       Label (optional)
                     </label>
                     <input
                       type="text"
                       value={newStepLabel}
                       onChange={(e) => setNewStepLabel(e.target.value)}
-                      className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800"
+                      className="mt-1 block w-full rounded-lg border border-warm-300 px-3 py-2 text-sm dark:border-warm-700 dark:bg-warm-800"
                       placeholder="e.g. Send notification to #finance"
                     />
                   </div>
@@ -301,7 +301,7 @@ function NewWorkflowPage() {
                     <button
                       type="button"
                       onClick={() => setShowAddStep(false)}
-                      className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium dark:border-gray-700"
+                      className="rounded-lg border border-warm-300 px-4 py-2 text-sm font-medium dark:border-warm-700"
                     >
                       Cancel
                     </button>
@@ -312,7 +312,7 @@ function NewWorkflowPage() {
               <button
                 type="button"
                 onClick={() => setShowAddStep(true)}
-                className="mt-4 rounded-lg border border-dashed border-gray-300 px-4 py-3 text-sm font-medium text-gray-600 hover:border-gray-400 dark:border-gray-700 dark:text-gray-400"
+                className="mt-4 rounded-lg border border-dashed border-warm-300 px-4 py-3 text-sm font-medium text-warm-600 hover:border-warm-400 dark:border-warm-700 dark:text-warm-400"
               >
                 + Add action step
               </button>
@@ -331,7 +331,7 @@ function NewWorkflowPage() {
             </button>
             <a
               href="/dashboard/workflows"
-              className="rounded-lg border border-gray-300 px-6 py-2 text-sm font-medium dark:border-gray-700"
+              className="rounded-lg border border-warm-300 px-6 py-2 text-sm font-medium dark:border-warm-700"
             >
               Cancel
             </a>

@@ -54,7 +54,7 @@ function WorkflowsPage() {
         <div className="mb-8 flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">Workflows</h1>
-            <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+            <p className="mt-1 text-sm text-warm-600 dark:text-warm-400">
               Automate your routine processes.
             </p>
           </div>
@@ -67,10 +67,10 @@ function WorkflowsPage() {
         </div>
 
         {loading ? (
-          <p className="text-gray-500">Loading...</p>
+          <p className="text-warm-500">Loading...</p>
         ) : workflows.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-gray-300 p-12 text-center dark:border-gray-700">
-            <p className="text-gray-600 dark:text-gray-400">
+          <div className="rounded-xl border border-dashed border-warm-300 p-12 text-center dark:border-warm-700">
+            <p className="text-warm-600 dark:text-warm-400">
               No workflows yet. Create your first automation.
             </p>
             <a
@@ -85,26 +85,26 @@ function WorkflowsPage() {
             {workflows.map((wf) => (
               <div
                 key={wf.id}
-                className="flex items-center justify-between rounded-lg border border-gray-200 p-4 dark:border-gray-800"
+                className="flex items-center justify-between rounded-lg border border-warm-200 p-4 dark:border-warm-800"
               >
                 <div className="flex-1">
                   <div className="flex items-center gap-3">
                     <h3 className="font-semibold">{wf.name}</h3>
-                    <span className="text-xs text-gray-500">
+                    <span className="text-xs text-warm-500">
                       {triggerLabel(wf.triggerType)}
                     </span>
                     {wf.enabled ? (
                       <span className="inline-block h-2 w-2 rounded-full bg-green-500" />
                     ) : (
-                      <span className="inline-block h-2 w-2 rounded-full bg-gray-400" />
+                      <span className="inline-block h-2 w-2 rounded-full bg-warm-400" />
                     )}
                   </div>
                   {wf.description && (
-                    <p className="mt-1 text-sm text-gray-500">
+                    <p className="mt-1 text-sm text-warm-500">
                       {wf.description}
                     </p>
                   )}
-                  <p className="mt-1 text-xs text-gray-400">
+                  <p className="mt-1 text-xs text-warm-400">
                     {wf.actions.length} step{wf.actions.length !== 1 ? "s" : ""}
                   </p>
                 </div>
@@ -112,7 +112,7 @@ function WorkflowsPage() {
                   <button
                     onClick={() => handleRun(wf.id)}
                     disabled={running === wf.id}
-                    className="rounded-lg border border-gray-300 px-3 py-1.5 text-xs font-medium hover:bg-gray-50 disabled:opacity-50 dark:border-gray-700"
+                    className="rounded-lg border border-warm-300 px-3 py-1.5 text-xs font-medium hover:bg-warm-50 disabled:opacity-50 dark:border-warm-700"
                   >
                     {running === wf.id ? "Running..." : "Run"}
                   </button>

@@ -54,7 +54,7 @@ function DocsPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Documentation</h1>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Everything you need to get the most out of LoomLink.</p>
+          <p className="mt-4 text-lg text-warm-600 dark:text-warm-400">Everything you need to get the most out of LoomLink.</p>
         </div>
 
         <a href="#quickstart" className="mx-auto mt-8 flex max-w-2xl items-center justify-center gap-2 rounded-xl border-2 border-dashed border-rose-gold-300 p-4 text-rose-gold-700 transition-colors hover:border-rose-gold-400 hover:bg-blush-50 dark:border-rose-gold-700 dark:text-rose-gold-300 dark:hover:border-rose-gold-500 dark:hover:bg-rose-gold-950">
@@ -72,9 +72,9 @@ function DocsPage() {
                 {section.items.map((item) => (
                   <div key={item.name}>
                     <h3 className="font-semibold">{item.name}</h3>
-                    <p className="mt-1 text-sm leading-6 text-gray-600 dark:text-gray-400">{item.desc}</p>
+                    <p className="mt-1 text-sm leading-6 text-warm-600 dark:text-warm-400">{item.desc}</p>
                     {item.details && (
-                      <ul className="mt-2 space-y-1 text-xs text-gray-500">
+                      <ul className="mt-2 space-y-1 text-xs text-warm-500">
                         {item.details.map((d) => (
                           <li key={d} className="flex items-start gap-1.5">
                             <svg className="mt-0.5 h-3 w-3 shrink-0 text-rose-gold-500" fill="currentColor" viewBox="0 0 20 20">
@@ -95,43 +95,43 @@ function DocsPage() {
         <div id="quickstart" className="mt-20 scroll-mt-20">
           <h2 className="text-2xl font-bold">Quickstart Guide</h2>
           <div className="mt-6 space-y-8">
-            <div className="rounded-xl border border-gray-200 p-6 dark:border-gray-800">
+            <div className="rounded-xl border border-warm-200 p-6 dark:border-warm-800">
               <div className="flex items-center gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-gold-600 text-sm font-bold text-white">1</span>
                 <h3 className="text-lg font-semibold">Connect an integration</h3>
               </div>
-              <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">Go to the Integrations page in your dashboard. Pick a service (Stripe, Gmail, Slack, etc.) and click Connect. For API-key-based services, paste your key. For OAuth services, you'll be redirected to authorize access.</p>
+              <p className="mt-3 text-sm text-warm-600 dark:text-warm-400">Go to the Integrations page in your dashboard. Pick a service (Stripe, Gmail, Slack, etc.) and click Connect. For API-key-based services, paste your key. For OAuth services, you'll be redirected to authorize access.</p>
             </div>
-            <div className="rounded-xl border border-gray-200 p-6 dark:border-gray-800">
+            <div className="rounded-xl border border-warm-200 p-6 dark:border-warm-800">
               <div className="flex items-center gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-gold-600 text-sm font-bold text-white">2</span>
                 <h3 className="text-lg font-semibold">Create a workflow</h3>
               </div>
-              <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">Go to Workflows → New Workflow. Give it a name, choose a trigger (Manual, Schedule, or Webhook), then add action steps. Each step picks a connector and an operation. Save when you're done.</p>
+              <p className="mt-3 text-sm text-warm-600 dark:text-warm-400">Go to Workflows → New Workflow. Give it a name, choose a trigger (Manual, Schedule, or Webhook), then add action steps. Each step picks a connector and an operation. Save when you're done.</p>
             </div>
-            <div className="rounded-xl border border-gray-200 p-6 dark:border-gray-800">
+            <div className="rounded-xl border border-warm-200 p-6 dark:border-warm-800">
               <div className="flex items-center gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-gold-600 text-sm font-bold text-white">3</span>
                 <h3 className="text-lg font-semibold">Run it</h3>
               </div>
-              <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">From the Workflows list, click Run to test your workflow manually. Check the Activity log to see results. Once everything works, enable the workflow to run on its trigger schedule automatically.</p>
+              <p className="mt-3 text-sm text-warm-600 dark:text-warm-400">From the Workflows list, click Run to test your workflow manually. Check the Activity log to see results. Once everything works, enable the workflow to run on its trigger schedule automatically.</p>
             </div>
           </div>
         </div>
 
         <div id="action-chaining" className="mt-20 scroll-mt-20">
           <h2 className="text-2xl font-bold">Template Variables</h2>
-          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Use <code className="rounded bg-gray-100 px-1.5 py-0.5 text-xs font-mono dark:bg-gray-800">{`{{variable}}`}</code> syntax to reference data from triggers or previous steps.</p>
-          <div className="mt-6 overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-800">
-            <table className="min-w-full divide-y divide-gray-200 text-sm dark:divide-gray-800">
-              <thead className="bg-gray-50 dark:bg-gray-900">
+          <p className="mt-2 text-sm text-warm-600 dark:text-warm-400">Use <code className="rounded bg-warm-100 px-1.5 py-0.5 text-xs font-mono dark:bg-warm-800">{`{{variable}}`}</code> syntax to reference data from triggers or previous steps.</p>
+          <div className="mt-6 overflow-x-auto rounded-xl border border-warm-200 dark:border-warm-800">
+            <table className="min-w-full divide-y divide-warm-200 text-sm dark:divide-warm-800">
+              <thead className="bg-warm-50 dark:bg-warm-900">
                 <tr><th className="px-4 py-3 text-left font-semibold">Pattern</th><th className="px-4 py-3 text-left font-semibold">Description</th></tr>
               </thead>
-              <tbody className="divide-y divide-gray-200 dark:divide-gray-800">
-                <tr><td className="px-4 py-3 font-mono text-xs">{`{{trigger.event}}`}</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">The webhook event payload or manual run context</td></tr>
-                <tr><td className="px-4 py-3 font-mono text-xs">{`{{trigger.scheduled_at}}`}</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">ISO timestamp of when a scheduled workflow fired</td></tr>
-                <tr><td className="px-4 py-3 font-mono text-xs">{`{{step_name.output_key}}`}</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">Output value from a previous action step</td></tr>
-                <tr><td className="px-4 py-3 font-mono text-xs">{`{{step_name.result}}`}</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">Full result object from a previous step</td></tr>
+              <tbody className="divide-y divide-warm-200 dark:divide-warm-800">
+                <tr><td className="px-4 py-3 font-mono text-xs">{`{{trigger.event}}`}</td><td className="px-4 py-3 text-warm-600 dark:text-warm-400">The webhook event payload or manual run context</td></tr>
+                <tr><td className="px-4 py-3 font-mono text-xs">{`{{trigger.scheduled_at}}`}</td><td className="px-4 py-3 text-warm-600 dark:text-warm-400">ISO timestamp of when a scheduled workflow fired</td></tr>
+                <tr><td className="px-4 py-3 font-mono text-xs">{`{{step_name.output_key}}`}</td><td className="px-4 py-3 text-warm-600 dark:text-warm-400">Output value from a previous action step</td></tr>
+                <tr><td className="px-4 py-3 font-mono text-xs">{`{{step_name.result}}`}</td><td className="px-4 py-3 text-warm-600 dark:text-warm-400">Full result object from a previous step</td></tr>
               </tbody>
             </table>
           </div>
@@ -139,27 +139,27 @@ function DocsPage() {
 
         <div id="scheduled-workflows" className="mt-20 scroll-mt-20">
           <h2 className="text-2xl font-bold">Cron Schedule Reference</h2>
-          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Standard cron syntax with 5 fields: minute hour day-of-month month day-of-week.</p>
-          <div className="mt-6 overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-800">
-            <table className="min-w-full divide-y divide-gray-200 text-sm dark:divide-gray-800">
-              <thead className="bg-gray-50 dark:bg-gray-900">
+          <p className="mt-2 text-sm text-warm-600 dark:text-warm-400">Standard cron syntax with 5 fields: minute hour day-of-month month day-of-week.</p>
+          <div className="mt-6 overflow-x-auto rounded-xl border border-warm-200 dark:border-warm-800">
+            <table className="min-w-full divide-y divide-warm-200 text-sm dark:divide-warm-800">
+              <thead className="bg-warm-50 dark:bg-warm-900">
                 <tr><th className="px-4 py-3 text-left font-semibold">Expression</th><th className="px-4 py-3 text-left font-semibold">Meaning</th></tr>
               </thead>
-              <tbody className="divide-y divide-gray-200 dark:divide-gray-800">
-                <tr><td className="px-4 py-3 font-mono text-xs">* * * * *</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">Every minute</td></tr>
-                <tr><td className="px-4 py-3 font-mono text-xs">*/15 * * * *</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">Every 15 minutes</td></tr>
-                <tr><td className="px-4 py-3 font-mono text-xs">0 * * * *</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">Every hour at :00</td></tr>
-                <tr><td className="px-4 py-3 font-mono text-xs">0 9 * * *</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">Every day at 9:00 AM</td></tr>
-                <tr><td className="px-4 py-3 font-mono text-xs">0 9 * * 1-5</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">Weekdays at 9:00 AM</td></tr>
-                <tr><td className="px-4 py-3 font-mono text-xs">0 0 1 * *</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">First day of month at midnight</td></tr>
+              <tbody className="divide-y divide-warm-200 dark:divide-warm-800">
+                <tr><td className="px-4 py-3 font-mono text-xs">* * * * *</td><td className="px-4 py-3 text-warm-600 dark:text-warm-400">Every minute</td></tr>
+                <tr><td className="px-4 py-3 font-mono text-xs">*/15 * * * *</td><td className="px-4 py-3 text-warm-600 dark:text-warm-400">Every 15 minutes</td></tr>
+                <tr><td className="px-4 py-3 font-mono text-xs">0 * * * *</td><td className="px-4 py-3 text-warm-600 dark:text-warm-400">Every hour at :00</td></tr>
+                <tr><td className="px-4 py-3 font-mono text-xs">0 9 * * *</td><td className="px-4 py-3 text-warm-600 dark:text-warm-400">Every day at 9:00 AM</td></tr>
+                <tr><td className="px-4 py-3 font-mono text-xs">0 9 * * 1-5</td><td className="px-4 py-3 text-warm-600 dark:text-warm-400">Weekdays at 9:00 AM</td></tr>
+                <tr><td className="px-4 py-3 font-mono text-xs">0 0 1 * *</td><td className="px-4 py-3 text-warm-600 dark:text-warm-400">First day of month at midnight</td></tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <div className="mt-16 rounded-xl border border-gray-200 bg-gray-50 p-8 text-center dark:border-gray-800 dark:bg-gray-900">
+        <div className="mt-16 rounded-xl border border-warm-200 bg-warm-50 p-8 text-center dark:border-warm-800 dark:bg-warm-900">
           <h2 className="text-xl font-bold">Need help?</h2>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">Can&apos;t find what you&apos;re looking for? Reach out to our support team.</p>
+          <p className="mt-2 text-warm-600 dark:text-warm-400">Can&apos;t find what you&apos;re looking for? Reach out to our support team.</p>
           <a href="#" className="mt-4 inline-block text-sm font-medium text-rose-gold-600 hover:underline">Contact support →</a>
         </div>
       </div>

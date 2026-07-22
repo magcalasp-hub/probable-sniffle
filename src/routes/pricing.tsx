@@ -87,7 +87,7 @@ function PricingPage() {
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Simple, transparent pricing
           </h1>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-lg text-warm-600 dark:text-warm-400">
             Start free. Upgrade when you outgrow us.
           </p>
         </div>
@@ -99,7 +99,7 @@ function PricingPage() {
               className={`rounded-2xl border p-8 ${
                 plan.highlighted
                   ? "border-rose-gold-600 ring-2 ring-rose-gold-600"
-                  : "border-gray-200 dark:border-gray-800"
+                  : "border-warm-200 dark:border-warm-800"
               }`}
             >
               {plan.name === "Non-Profit" && (
@@ -110,13 +110,13 @@ function PricingPage() {
               <h2 className={`text-lg font-semibold ${plan.name === "Non-Profit" ? "mt-2" : ""}`}>
                 {plan.name}
               </h2>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              <p className="mt-1 text-sm text-warm-600 dark:text-warm-400">
                 {plan.desc}
               </p>
               <div className="mt-6">
                 <span className="text-4xl font-bold">{plan.price}</span>
                 {plan.period && (
-                  <span className="text-sm text-gray-600 dark:text-gray-400">
+                  <span className="text-sm text-warm-600 dark:text-warm-400">
                     {plan.period}
                   </span>
                 )}
@@ -149,7 +149,7 @@ function PricingPage() {
                   className={`mt-8 block rounded-lg px-6 py-3 text-center text-sm font-semibold ${
                     plan.highlighted
                       ? "bg-rose-gold-600 text-white hover:bg-rose-gold-500"
-                      : "border border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800"
+                      : "border border-warm-300 text-warm-700 hover:bg-warm-50 dark:border-warm-700 dark:text-warm-300 dark:hover:bg-warm-800"
                   }`}
                 >
                   {plan.cta}
@@ -160,7 +160,7 @@ function PricingPage() {
                   className={`mt-8 block rounded-lg px-6 py-3 text-center text-sm font-semibold ${
                     plan.highlighted
                       ? "bg-rose-gold-600 text-white hover:bg-rose-gold-500"
-                      : "border border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800"
+                      : "border border-warm-300 text-warm-700 hover:bg-warm-50 dark:border-warm-700 dark:text-warm-300 dark:hover:bg-warm-800"
                   }`}
                 >
                   {plan.cta}

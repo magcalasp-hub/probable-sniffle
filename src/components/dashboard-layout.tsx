@@ -34,12 +34,12 @@ export default function DashboardLayout({ children, currentPath }: Props) {
 
   return (
     <div className="flex min-h-[calc(100dvh-4rem)]">
-      <aside className="hidden w-64 shrink-0 border-r border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-900 md:block">
+      <aside className="hidden w-64 shrink-0 border-r border-warm-200 bg-warm-50 p-4 dark:border-warm-800 dark:bg-warm-900 md:block">
         <nav className="space-y-1">
           {navItems.map((item) => {
             const isActive = currentPath === item.path;
             return (
-              <a key={item.path} href={item.href} className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${isActive ? "bg-blush-100 text-rose-gold-700 dark:bg-rose-gold-900 dark:text-blush-200" : "text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100"}`}>
+              <a key={item.path} href={item.href} className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${isActive ? "bg-blush-100 text-rose-gold-700 dark:bg-rose-gold-900 dark:text-blush-200" : "text-warm-600 hover:bg-warm-100 hover:text-warm-900 dark:text-warm-400 dark:hover:bg-warm-800 dark:hover:text-warm-100"}`}>
                 <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                 </svg>
@@ -48,9 +48,9 @@ export default function DashboardLayout({ children, currentPath }: Props) {
             );
           })}
         </nav>
-        <div className="mt-8 border-t border-gray-200 pt-4 dark:border-gray-800">
+        <div className="mt-8 border-t border-warm-200 pt-4 dark:border-warm-800">
           <form action="/api/auth/logout" method="POST">
-            <button type="submit" className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-100">
+            <button type="submit" className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-warm-600 hover:bg-warm-100 hover:text-warm-900 dark:text-warm-400 dark:hover:bg-warm-800 dark:hover:text-warm-100">
               <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
               </svg>
@@ -70,7 +70,7 @@ export default function DashboardLayout({ children, currentPath }: Props) {
           </div>
         )}
         {dbStatus === "checking" && (
-          <div className="flex items-center gap-2 border-b border-gray-200 bg-gray-50 px-6 py-2 text-xs text-gray-500 dark:border-gray-800 dark:bg-gray-900">
+          <div className="flex items-center gap-2 border-b border-warm-200 bg-warm-50 px-6 py-2 text-xs text-warm-500 dark:border-warm-800 dark:bg-warm-900">
             <svg className="h-4 w-4 shrink-0 animate-spin" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
@@ -79,11 +79,11 @@ export default function DashboardLayout({ children, currentPath }: Props) {
           </div>
         )}
 
-        <div className="flex overflow-x-auto border-b border-gray-200 md:hidden dark:border-gray-800">
+        <div className="flex overflow-x-auto border-b border-warm-200 md:hidden dark:border-warm-800">
           {navItems.map((item) => {
             const isActive = currentPath === item.path;
             return (
-              <a key={item.path} href={item.href} className={`flex shrink-0 items-center gap-1.5 border-b-2 px-4 py-3 text-xs font-medium ${isActive ? "border-rose-gold-600 text-rose-gold-600" : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"}`}>
+              <a key={item.path} href={item.href} className={`flex shrink-0 items-center gap-1.5 border-b-2 px-4 py-3 text-xs font-medium ${isActive ? "border-rose-gold-600 text-rose-gold-600" : "border-transparent text-warm-500 hover:border-warm-300 hover:text-warm-700"}`}>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                 </svg>

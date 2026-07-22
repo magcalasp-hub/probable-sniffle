@@ -61,7 +61,7 @@ function OnboardingPage() {
     return (
       <DashboardLayout currentPath="overview">
         <div className="flex min-h-[50vh] items-center justify-center">
-          <div className="flex items-center gap-2 text-sm text-gray-500">
+          <div className="flex items-center gap-2 text-sm text-warm-500">
             <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
@@ -79,10 +79,10 @@ function OnboardingPage() {
         <div className="mb-8 flex items-center justify-center gap-2">
           {(["welcome", "connect", "workflow", "done"] as const).map((s, i) => (
             <div key={s} className="flex items-center gap-2">
-              <div className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold ${step === s ? "bg-rose-gold-600 text-white" : ["connect", "workflow", "done"].indexOf(s) <= ["connect", "workflow", "done"].indexOf(step) ? "bg-blush-100 text-rose-gold-700 dark:bg-rose-gold-900 dark:text-blush-200" : "bg-gray-100 text-gray-400 dark:bg-gray-800"}`}>
+              <div className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold ${step === s ? "bg-rose-gold-600 text-white" : ["connect", "workflow", "done"].indexOf(s) <= ["connect", "workflow", "done"].indexOf(step) ? "bg-blush-100 text-rose-gold-700 dark:bg-rose-gold-900 dark:text-blush-200" : "bg-warm-100 text-warm-400 dark:bg-warm-800"}`}>
                 {["connect", "workflow", "done"].indexOf(s) <= ["connect", "workflow", "done"].indexOf(step) && step !== s ? "✓" : i + 1}
               </div>
-              {i < 3 && <div className={`h-0.5 w-8 ${["connect", "workflow", "done"].indexOf(s) < ["connect", "workflow", "done"].indexOf(step) ? "bg-rose-gold-500" : "bg-gray-200 dark:bg-gray-700"}`} />}
+              {i < 3 && <div className={`h-0.5 w-8 ${["connect", "workflow", "done"].indexOf(s) < ["connect", "workflow", "done"].indexOf(step) ? "bg-rose-gold-500" : "bg-warm-200 dark:bg-warm-700"}`} />}
             </div>
           ))}
         </div>
@@ -95,13 +95,13 @@ function OnboardingPage() {
               </svg>
             </div>
             <h1 className="mt-6 text-3xl font-bold">Welcome to LoomLink!</h1>
-            <p className="mt-3 text-lg text-gray-600 dark:text-gray-400">Let&apos;s get you set up in 3 quick steps.</p>
+            <p className="mt-3 text-lg text-warm-600 dark:text-warm-400">Let&apos;s get you set up in 3 quick steps.</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {[{ n: "1", t: "Connect", d: "Link your first tool" }, { n: "2", t: "Create", d: "Build your first workflow" }, { n: "3", t: "Run", d: "Your automation runs on autopilot" }].map((item) => (
-                <div key={item.n} className="rounded-xl border border-gray-200 p-4 text-left dark:border-gray-800">
+                <div key={item.n} className="rounded-xl border border-warm-200 p-4 text-left dark:border-warm-800">
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blush-100 text-xs font-bold text-rose-gold-700 dark:bg-rose-gold-900 dark:text-blush-200">{item.n}</span>
                   <h3 className="mt-3 font-semibold">{item.t}</h3>
-                  <p className="mt-1 text-xs text-gray-500">{item.d}</p>
+                  <p className="mt-1 text-xs text-warm-500">{item.d}</p>
                 </div>
               ))}
             </div>
@@ -112,29 +112,29 @@ function OnboardingPage() {
         {step === "connect" && (
           <div>
             <h2 className="text-2xl font-bold">Connect your first integration</h2>
-            <p className="mt-2 text-gray-600 dark:text-gray-400">Pick a service to connect.</p>
+            <p className="mt-2 text-warm-600 dark:text-warm-400">Pick a service to connect.</p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {connectors.slice(0, 4).map((connector) => (
-                <button key={connector.id} onClick={() => handleConnectIntegration(connector.id)} className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-rose-gold-300 hover:bg-blush-50 dark:border-gray-800 dark:hover:border-rose-gold-700 dark:hover:bg-rose-gold-950">
+                <button key={connector.id} onClick={() => handleConnectIntegration(connector.id)} className="rounded-xl border border-warm-200 p-4 text-left transition-colors hover:border-rose-gold-300 hover:bg-blush-50 dark:border-warm-800 dark:hover:border-rose-gold-700 dark:hover:bg-rose-gold-950">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-lg dark:bg-gray-800">{connector.icon}</span>
-                    <div><h3 className="font-semibold">{connector.name}</h3><p className="text-xs text-gray-500">{connector.authType === "api_key" ? "API Key" : "OAuth"}</p></div>
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-warm-100 text-lg dark:bg-warm-800">{connector.icon}</span>
+                    <div><h3 className="font-semibold">{connector.name}</h3><p className="text-xs text-warm-500">{connector.authType === "api_key" ? "API Key" : "OAuth"}</p></div>
                   </div>
-                  <p className="mt-2 text-xs text-gray-600 dark:text-gray-400">{connector.description}</p>
+                  <p className="mt-2 text-xs text-warm-600 dark:text-warm-400">{connector.description}</p>
                 </button>
               ))}
             </div>
-            <button onClick={handleSkipIntegration} className="mt-4 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">Skip for now</button>
+            <button onClick={handleSkipIntegration} className="mt-4 text-sm text-warm-500 hover:text-warm-700 dark:hover:text-warm-300">Skip for now</button>
           </div>
         )}
 
         {step === "workflow" && (
           <div>
             <h2 className="text-2xl font-bold">Create your first workflow</h2>
-            <p className="mt-2 text-gray-600 dark:text-gray-400">We&apos;ll create a simple one to start.</p>
-            <div className="mt-6 rounded-xl border border-gray-200 p-6 dark:border-gray-800">
+            <p className="mt-2 text-warm-600 dark:text-warm-400">We&apos;ll create a simple one to start.</p>
+            <div className="mt-6 rounded-xl border border-warm-200 p-6 dark:border-warm-800">
               <h3 className="font-semibold">Sample: "My first workflow"</h3>
-              <ul className="mt-3 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <ul className="mt-3 space-y-2 text-sm text-warm-600 dark:text-warm-400">
                 <li className="flex items-center gap-2">🔧 Trigger type: Manual (run on demand)</li>
                 <li className="flex items-center gap-2">📋 Actions: None yet (add them later)</li>
                 <li className="flex items-center gap-2">✅ Created but disabled until you enable it</li>
@@ -142,7 +142,7 @@ function OnboardingPage() {
             </div>
             <div className="mt-6 flex gap-3">
               <button onClick={handleCreateWorkflow} className="rounded-lg bg-rose-gold-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-rose-gold-500">Create workflow →</button>
-              <button onClick={handleSkipWorkflow} className="text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">Skip for now</button>
+              <button onClick={handleSkipWorkflow} className="text-sm text-warm-500 hover:text-warm-700 dark:hover:text-warm-300">Skip for now</button>
             </div>
           </div>
         )}
@@ -155,16 +155,16 @@ function OnboardingPage() {
               </svg>
             </div>
             <h1 className="mt-6 text-3xl font-bold">You&apos;re all set!</h1>
-            <p className="mt-3 text-lg text-gray-600 dark:text-gray-400">Your LoomLink account is ready to go.</p>
+            <p className="mt-3 text-lg text-warm-600 dark:text-warm-400">Your LoomLink account is ready to go.</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              <a href="/dashboard/integrations" className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-rose-gold-300 dark:border-gray-800 dark:hover:border-rose-gold-700">
-                <h3 className="font-semibold">More integrations</h3><p className="mt-1 text-xs text-gray-500">Connect additional tools</p>
+              <a href="/dashboard/integrations" className="rounded-xl border border-warm-200 p-4 text-left transition-colors hover:border-rose-gold-300 dark:border-warm-800 dark:hover:border-rose-gold-700">
+                <h3 className="font-semibold">More integrations</h3><p className="mt-1 text-xs text-warm-500">Connect additional tools</p>
               </a>
-              <a href="/dashboard/workflows/new" className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-rose-gold-300 dark:border-gray-800 dark:hover:border-rose-gold-700">
-                <h3 className="font-semibold">Build workflows</h3><p className="mt-1 text-xs text-gray-500">Create multi-step automations</p>
+              <a href="/dashboard/workflows/new" className="rounded-xl border border-warm-200 p-4 text-left transition-colors hover:border-rose-gold-300 dark:border-warm-800 dark:hover:border-rose-gold-700">
+                <h3 className="font-semibold">Build workflows</h3><p className="mt-1 text-xs text-warm-500">Create multi-step automations</p>
               </a>
-              <a href="/docs" className="rounded-xl border border-gray-200 p-4 text-left transition-colors hover:border-rose-gold-300 dark:border-gray-800 dark:hover:border-rose-gold-700">
-                <h3 className="font-semibold">Read the docs</h3><p className="mt-1 text-xs text-gray-500">Learn about templates & cron</p>
+              <a href="/docs" className="rounded-xl border border-warm-200 p-4 text-left transition-colors hover:border-rose-gold-300 dark:border-warm-800 dark:hover:border-rose-gold-700">
+                <h3 className="font-semibold">Read the docs</h3><p className="mt-1 text-xs text-warm-500">Learn about templates & cron</p>
               </a>
             </div>
             <button onClick={handleFinish} className="mt-8 rounded-lg bg-rose-gold-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-rose-gold-500">Go to dashboard →</button>
